@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group 'launch'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+task launch(type: Test) {
+    useTestNG() {
+        include '**/launch.class'
+    }
+}
+
+task hello(type: JavaExec) {
+    classpath sourceSets.test.runtimeClasspath
+    main = 'launch'
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
+}
