@@ -7,11 +7,12 @@ import org.testng.annotations.Test;
 
 import java.net.URL;
 
-public class seleniumDocker {
+public class SeleniumDocker extends BeforeTestng {
 
     @Test
     public void runTestOnDocker() throws Exception {
 
+        Log.info("Test started");
         DesiredCapabilities cap = DesiredCapabilities.chrome();
         URL url = new URL("http://localhost:4444/wd/hub");
         WebDriver driver = new RemoteWebDriver(url, cap);
@@ -19,5 +20,6 @@ public class seleniumDocker {
         driver.get("http://google.com");
         System.err.println(driver.getTitle());
         driver.quit();
+        Log.info("Test ended");
     }
 }
