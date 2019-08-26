@@ -20,8 +20,6 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/launch/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/launch/binary/output.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/launch/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/launch/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/launch/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/launch/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/launch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/seleniumDocker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/seleniumDocker.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,14 +47,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1PrSgSaE49HNJz35AZUR6VqO8n3" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources/drivers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java/selenium" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/java/selenium" />
       <recent name="$PROJECT_DIR$/src/test/resources/drivers" />
     </key>
   </component>
@@ -72,7 +73,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.launch [launch]">
+  <component name="RunManager" selected="Gradle.launch [launchDock]">
     <configuration name="launch [hello]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -172,9 +173,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.launch [launchDock]" />
         <item itemvalue="Gradle.launch [launch]" />
         <item itemvalue="Gradle.launch.testing" />
-        <item itemvalue="Gradle.launch [launchDock]" />
         <item itemvalue="Gradle.seleniumDocker.runTestOnDocker" />
         <item itemvalue="Gradle.launch [hello]" />
       </list>
@@ -219,7 +220,28 @@
       <option name="project" value="LOCAL" />
       <updated>1566811708976</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add headless">
+      <created>1566812574294</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566812574294</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add compose">
+      <created>1566816558767</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566816558767</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add debug">
+      <created>1566818363000</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566818363001</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,6 +262,9 @@
     <MESSAGE value=".." />
     <MESSAGE value="add sel docker" />
     <MESSAGE value="add dock task" />
-    <option name="LAST_COMMIT_MESSAGE" value="add dock task" />
+    <MESSAGE value="add headless" />
+    <MESSAGE value="add compose" />
+    <MESSAGE value="add debug" />
+    <option name="LAST_COMMIT_MESSAGE" value="add debug" />
   </component>
 </project>
