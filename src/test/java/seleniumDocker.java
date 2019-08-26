@@ -16,6 +16,6 @@ public class seleniumDocker {
         WebDriver driver = new RemoteWebDriver(url, cap);
         driver.manage().window().maximize();
         driver.get("http://google.com");
-        System.out.println(driver.getTitle());
+        System.err.println(driver.getTitle());
     }
 }

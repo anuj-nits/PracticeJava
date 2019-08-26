@@ -15,10 +15,11 @@ public class launch {
 
         System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver");
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--no-sandbox", "--disable-dev-shm-usage");
+        options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.get("http://google.com");
+        System.err.println(driver.getTitle());
         Thread.sleep(3000);
         driver.quit();
     }
