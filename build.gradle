@@ -17,9 +17,10 @@ task launch(type: Test) {
     }
 }
 
-task hello(type: JavaExec) {
-    classpath sourceSets.test.runtimeClasspath
-    main = 'launch'
+task launchDock(type: Test) {
+    useTestNG() {
+        include '**/seleniumDocker.class'
+    }
 }
 
 task helloworld(type: JavaExec) {
