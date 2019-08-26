@@ -11,11 +11,11 @@ public class seleniumDocker {
     public void runTestOnDocker() throws Exception {
 
         DesiredCapabilities cap = DesiredCapabilities.chrome();
-        System.setProperty("webdriver.chrome.driver", "./src/test/resources/drivers/chromedriver");
-        URL url = new URL("http://localhost:32770/wd/hub");
+        URL url = new URL("http://localhost:4444/wd/hub");
         WebDriver driver = new RemoteWebDriver(url, cap);
         driver.manage().window().maximize();
         driver.get("http://google.com");
         System.err.println(driver.getTitle());
+        driver.quit();
     }
 }
