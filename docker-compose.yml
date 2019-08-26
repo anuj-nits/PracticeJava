@@ -14,7 +14,7 @@ services:
       - "4444:4444"
 
   chrome:
-    image: selenium/node-chrome:latest
+    image: selenium/node-chrome-debug:latest
     depends_on:
       - selenium-hub
     environment:
@@ -24,7 +24,7 @@ services:
       - NODE_MAX_INSTANCES=10
 
   firefox:
-    image: selenium/node-firefox:latest
+    image: selenium/node-firefox-debug:latest
     depends_on:
       - selenium-hub
     environment:
