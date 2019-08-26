@@ -22,6 +22,11 @@ task hello(type: JavaExec) {
     main = 'launch'
 }
 
+task helloworld(type: JavaExec) {
+    classpath sourceSets.test.runtimeClasspath
+    main = 'launch'
+}
+
 dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
