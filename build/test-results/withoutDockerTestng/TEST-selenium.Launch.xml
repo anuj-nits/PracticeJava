@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="selenium.Launch" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-26T11:40:17" hostname="SSAHMDTL03503" time="5.738">
+<testsuite name="selenium.Launch" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-26T13:15:18" hostname="SSAHMDTL03503" time="8.396">
   <properties/>
-  <testcase name="testing" classname="selenium.Launch" time="5.738"/>
-  <system-out><![CDATA[?[m2019-08-26 17:10:17 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test started?[m
-?[m2019-08-26 17:10:23 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test ended?[m
+  <testcase name="testing" classname="selenium.Launch" time="8.396"/>
+  <system-out><![CDATA[?[m2019-08-26 18:45:18 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test started?[m
+?[m2019-08-26 18:45:26 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test ended?[m
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 2.41.578700 (2f1ed5f9343c13f73144538f15c00b370eda6706) on port 2320
+  <system-err><![CDATA[Starting ChromeDriver 2.41.578700 (2f1ed5f9343c13f73144538f15c00b370eda6706) on port 11380
 Only local connections are allowed.
-Aug 26, 2019 5:10:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Aug 26, 2019 6:45:18 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: OSS
 Google
 ]]></system-err>

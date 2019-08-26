@@ -37,7 +37,7 @@ task withDockerTestng(type: Test) {
 
 task helloworld(type: JavaExec) {
     classpath sourceSets.test.runtimeClasspath
-    main = 'launch'
+    main = 'selenium.Launch'
 }
 
 dependencies {
