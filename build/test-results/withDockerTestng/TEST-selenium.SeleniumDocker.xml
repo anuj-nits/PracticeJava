@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="selenium.SeleniumDocker" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-26T13:15:06" hostname="SSAHMDTL03503" time="6.086">
+<testsuite name="selenium.SeleniumDocker" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-26T13:41:57" hostname="SSAHMDTL03503" time="3.298">
   <properties/>
-  <testcase name="runTestOnDocker" classname="selenium.SeleniumDocker" time="6.086"/>
-  <system-out><![CDATA[?[m2019-08-26 18:45:06 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test started?[m
-?[m2019-08-26 18:45:12 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test ended?[m
+  <testcase name="runTestOnDocker" classname="selenium.SeleniumDocker" time="3.298"/>
+  <system-out><![CDATA[?[m2019-08-26 19:11:57 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test started?[m
+?[m2019-08-26 19:12:01 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test ended?[m
 ]]></system-out>
-  <system-err><![CDATA[Aug 26, 2019 6:45:06 PM org.openqa.selenium.remote.DesiredCapabilities chrome
+  <system-err><![CDATA[Aug 26, 2019 7:11:57 PM org.openqa.selenium.remote.DesiredCapabilities chrome
 INFO: Using `new ChromeOptions()` is preferred to `DesiredCapabilities.chrome()`
-Aug 26, 2019 6:45:06 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Aug 26, 2019 7:11:58 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 Google
 ]]></system-err>
