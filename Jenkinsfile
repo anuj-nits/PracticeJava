@@ -19,4 +19,7 @@ node{
         stage('withDockerTestng'){
         sh './gradlew withDockerTestng'
     }
+        stage('helloWorld'){
+        sh './gradlew helloWorld'
+        }
 }
