@@ -1,6 +1,6 @@
 package jsonManager;
 
-import logger.Log;
+import LogManager.LogManager;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -35,7 +35,7 @@ public class JsonManager {
             }
 
         } catch (Exception e) {
-            Log.error(e.getMessage());
+            LogManager.error(e.getMessage());
         }
         return locatorvalue;
     }
@@ -80,7 +80,7 @@ public class JsonManager {
             fileWriter.flush();
             fileWriter.close();
         } catch (Exception e) {
-            Log.error(e.getMessage());
+            LogManager.error(e.getMessage());
         }
     }
 }

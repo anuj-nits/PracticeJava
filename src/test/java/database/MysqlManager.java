@@ -1,14 +1,13 @@
 package database;
 
-import logger.Log;
-import org.testng.Assert;
+import LogManager.LogManager;
 
 import java.sql.*;
 import java.util.*;
 
-public class Mysql {
+public class MysqlManager {
 
-    private static Mysql mySQL = null;
+    private static MysqlManager mySQL = null;
 
     // Stores object of connection interface
     private static Connection connection;
@@ -36,10 +35,10 @@ public class Mysql {
      *
      * @return Object of MySQL class
      */
-    private static Mysql getInstance() {
+    private static MysqlManager getInstance() {
 
         if (mySQL == null)
-            mySQL = new Mysql();
+            mySQL = new MysqlManager();
 
         return mySQL;
     }
@@ -333,7 +332,7 @@ public class Mysql {
                 results.put(resultSetMetaData.getColumnName(j + 1), resultSet.getString(j + 1));
             }
         } else {
-            Log.error("There is no column with value " + columnValue + " in database");
+            LogManager.error("There is no column with value " + columnValue + " in database");
         }
         return results;
     }
@@ -389,7 +388,7 @@ public class Mysql {
                 resultList.add(results);
             }
         } else {
-            Log.error("There is no column with value " + columnValue + " in database");
+            LogManager.error("There is no column with value " + columnValue + " in database");
         }
         return resultList;
     }

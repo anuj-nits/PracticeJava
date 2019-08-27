@@ -1,16 +1,14 @@
 package selenium;
 
-import database.Mysql;
+import LogManager.LogManager;
+import csvManager.CsvManager;
+import database.MysqlManager;
 import excelManager.ExcelManager;
 import jsonManager.JsonManager;
-import logger.Log;
 import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Map;
-
-import static csvManager.CsvManager.readFromCSV;
-import static csvManager.CsvManager.writeToCSV;
 
 public class Launch extends BeforeTestng {
 
@@ -31,34 +29,34 @@ public class Launch extends BeforeTestng {
         String nameColumnValue = "Jack London";
         String updatedName = "Jakson London";
 
-        Mysql.createConnection();
-        System.out.println(Mysql.getRowCount(tableName));
-        System.err.println(Mysql.getColumnCount(tableName));
-        System.out.println(Mysql.getPartialRowCount(tableName, nameColumn, nameColumnValue));
-        System.err.println(Mysql.getCellData(tableName, nameColumn, idColumn, idColumnValue));
+        MysqlManager.createConnection();
+        System.out.println(MysqlManager.getRowCount(tableName));
+        System.err.println(MysqlManager.getColumnCount(tableName));
+        System.out.println(MysqlManager.getPartialRowCount(tableName, nameColumn, nameColumnValue));
+        System.err.println(MysqlManager.getCellData(tableName, nameColumn, idColumn, idColumnValue));
 
-        Object[][] ooo = Mysql.tableToObject(tableName);
+        Object[][] ooo = MysqlManager.tableToObject(tableName);
         for (Object[] oo : ooo)
             for (Object o : oo)
                 System.out.println(o.toString());
 
-        Map<String, String> m = Mysql.getRowData(tableName, idColumn, idColumnValue);
+        Map<String, String> m = MysqlManager.getRowData(tableName, idColumn, idColumnValue);
         for (Map.Entry<String, String> e : m.entrySet())
             System.err.println(e.getKey() + ": " + e.getValue());
 
-        List<Map<String, String>> l = Mysql.getMultipleRowData(tableName, idColumn, idColumnValue);
+        List<Map<String, String>> l = MysqlManager.getMultipleRowData(tableName, idColumn, idColumnValue);
 
         for (Map<String, String> ll : l)
             for (Map.Entry<String, String> e : ll.entrySet())
                 System.out.println(e.getKey() + ": " + e.getValue());
 
-        List<Map<String, String>> lll = Mysql.getTableData(tableName);
+        List<Map<String, String>> lll = MysqlManager.getTableData(tableName);
         for (Map<String, String> ll : lll)
             for (Map.Entry<String, String> e : ll.entrySet())
                 System.err.println(e.getKey() + ": " + e.getValue());
 
-        Mysql.updateCellData(tableName, idColumn, idColumnValue, nameColumn, updatedName);
-        Mysql.closeConnection();
+        MysqlManager.updateCellData(tableName, idColumn, idColumnValue, nameColumn, updatedName);
+        MysqlManager.closeConnection();
     }
 
     private static void excelManager() throws Exception {
@@ -80,17 +78,17 @@ public class Launch extends BeforeTestng {
 
     private static void csvManager() throws Exception {
 
-        System.out.println(readFromCSV(1, 1));
-        writeToCSV("dandy", 1, 1);
+        System.out.println(CsvManager.readFromCSV(1, 1));
+        CsvManager.writeToCSV("dandy", 1, 1);
     }
 
     @Test
     public void testing() throws Exception {
 
-        Log.info("Test started");
+        LogManager.info("Test started");
         driver.get("http://google.com");
-        Log.debug(driver.getTitle());
+        LogManager.debug(driver.getTitle());
         Thread.sleep(3000);
-        Log.info("Test ended");
+        LogManager.info("Test ended");
     }
 }

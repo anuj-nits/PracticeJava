@@ -1,4 +1,4 @@
-package logger;
+package LogManager;
 
 import org.apache.log4j.*;
 
@@ -11,25 +11,25 @@ import org.apache.log4j.*;
  *
  * @author Anuj Gupta
  */
-public class Log {
+public class LogManager {
 
-    private static Log log = null;
+    private static LogManager logManager = null;
     // Initializes logger class and gives a name to the logger
     private static Logger logger = Logger.getLogger(" - ");
     private static ConsoleAppender consoleAppender = new ConsoleAppender();
     private static String conversionPattern;
 
     // To prevent other classes to create object of this utility class
-    private Log() {
+    private LogManager() {
 
         throw new IllegalStateException("Utility class");
     }
 
-    public static Log getInstance() {
-        if (log == null) {
-            log = new Log();
+    public static LogManager getInstance() {
+        if (logManager == null) {
+            logManager = new LogManager();
         }
-        return log;
+        return logManager;
     }
 
     /**
@@ -66,7 +66,7 @@ public class Log {
             logger.setAdditivity(false);
 
         } catch (Exception e) {
-            Log.error(e.getMessage());
+            LogManager.error(e.getMessage());
         }
     }// End of setHTMLogs
 
@@ -126,7 +126,7 @@ public class Log {
             logger.setAdditivity(false);
 
         } catch (Exception e) {
-            Log.error(e.getMessage());
+            LogManager.error(e.getMessage());
         }
     }// End of setUserLogs
 
@@ -158,7 +158,7 @@ public class Log {
             logger.info(message);
 
         } catch (Exception e) {
-            Log.error(e.getMessage());
+            LogManager.error(e.getMessage());
         }
     }// End of info
 
@@ -223,7 +223,7 @@ public class Log {
             logger.debug(message);
 
         } catch (Exception e) {
-            Log.error(e.getMessage());
+            LogManager.error(e.getMessage());
         }
     }// End of debug
 
@@ -249,7 +249,7 @@ public class Log {
             return "(" + className + "." + methodName + ":" + lineNumber + ")";
 
         } catch (Exception e) {
-            Log.error(e.getMessage());
+            LogManager.error(e.getMessage());
         }
         return "";
     }// End of getStackTrace

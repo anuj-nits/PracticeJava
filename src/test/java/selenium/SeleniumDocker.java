@@ -1,6 +1,6 @@
 package selenium;
 
-import logger.Log;
+import LogManager.LogManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -13,7 +13,7 @@ public class SeleniumDocker extends BeforeTestng {
     @Test
     public void runTestOnDocker() throws Exception {
 
-        Log.info("Test started");
+        LogManager.info("Test started");
         DesiredCapabilities cap = DesiredCapabilities.chrome();
         URL url = new URL("http://localhost:4444/wd/hub");
         WebDriver driver = new RemoteWebDriver(url, cap);
@@ -21,6 +21,6 @@ public class SeleniumDocker extends BeforeTestng {
         driver.get("http://google.com");
         System.err.println(driver.getTitle());
         driver.quit();
-        Log.info("Test ended");
+        LogManager.info("Test ended");
     }
 }

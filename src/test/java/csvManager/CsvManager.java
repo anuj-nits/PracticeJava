@@ -1,8 +1,8 @@
 package csvManager;
 
+import LogManager.LogManager;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
-import logger.Log;
 
 import java.io.File;
 import java.io.FileReader;
@@ -38,7 +38,7 @@ public class CsvManager {
             writer.writeAll(csvBody);
             writer.flush();
         }
-        Log.info("Wrote data " + data + " to csv file at path: " + filePath + " at row: " + row + " and column: " + col);
+        LogManager.info("Wrote data " + data + " to csv file at path: " + filePath + " at row: " + row + " and column: " + col);
     }
 
     /**

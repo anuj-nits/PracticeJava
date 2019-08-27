@@ -1,10 +1,10 @@
-package extentReport;
+package extentManager;
 
+import LogManager.LogManager;
 import com.relevantcodes.extentreports.DisplayOrder;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import logger.Log;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -13,7 +13,7 @@ import org.openqa.selenium.WebDriver;
 import java.io.File;
 import java.util.Date;
 
-public class ExtentReporter {
+public class ExtentManager {
 
     // Declaration of the extent report reference variable
     private static ExtentReports extent;
@@ -25,7 +25,7 @@ public class ExtentReporter {
     private static WebDriver driver;
 
     // To prevent other classes to create object of this utility class
-    private ExtentReporter() {
+    private ExtentManager() {
         throw new IllegalStateException("Utility class");
     }
 
@@ -35,7 +35,7 @@ public class ExtentReporter {
     public static void setup(WebDriver driver) {
 
         extent = getInstance(driver);
-        Log.info("ExtentReporter setup done");
+        LogManager.info("ExtentReporter setup done");
     }
 
     /**
@@ -49,7 +49,7 @@ public class ExtentReporter {
         test = extent.startTest(name);
 
         // Display current test under execution in console
-        Log.info("#######  " + name + "  #######");
+        LogManager.info("#######  " + name + "  #######");
     }
 
     /**
@@ -74,7 +74,7 @@ public class ExtentReporter {
     private static ExtentReports getInstance(WebDriver driver) {
 
         try {
-            ExtentReporter.driver = driver;
+            ExtentManager.driver = driver;
             // Creates extent report if not done already
             if (extent == null) {
                 extent = new ExtentReports(extentReportPath + "index.html", true, DisplayOrder.OLDEST_FIRST);
@@ -83,7 +83,7 @@ public class ExtentReporter {
             return extent;
 
         } catch (Exception e) {
-            Log.error("Error in ExtentReports/getInstance");
+            LogManager.error("Error in ExtentReports/getInstance");
             return null;
         }
     }
@@ -99,9 +99,9 @@ public class ExtentReporter {
         try {
             test.log(LogStatus.PASS, description);
             //captureScreenshot();
-            Log.info(description);
+            LogManager.info(description);
         } catch (Exception e) {
-            Log.error("Error in ExtentReporter.PASS");
+            LogManager.error("Error in ExtentReporter.PASS");
         }
     }
 
@@ -116,10 +116,10 @@ public class ExtentReporter {
         try {
             test.log(LogStatus.FAIL, description);
             captureScreenshot();
-            Log.error(description);
+            LogManager.error(description);
 
         } catch (Exception e) {
-            Log.error("Issue in ExtentReporter.error method");
+            LogManager.error("Issue in ExtentReporter.error method");
         }
     }
 
@@ -147,6 +147,6 @@ public class ExtentReporter {
 
         // Append screenshot to extent report
         //test.log(LogStatus.INFO, test.addScreenCapture(screenshotName));
-        Log.info("Screenshot captured");
+        LogManager.info("Screenshot captured");
     }
 }

@@ -1,7 +1,7 @@
 package selenium;
 
-import extentReport.ExtentReporter;
-import logger.Log;
+import LogManager.LogManager;
+import extentManager.ExtentManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,14 +24,14 @@ public class BeforeTestng {
         options.addArguments("--headless", "--no-sandbox", "--disable-dev-shm-usage");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
-        Log.setup();
-        ExtentReporter.setup(driver);
+        LogManager.setup();
+        ExtentManager.setup(driver);
     }
 
     @BeforeMethod
     public void beforeTest(ITestResult result) {
 
-        ExtentReporter.startTest(result.getMethod().getMethodName());
+        ExtentManager.startTest(result.getMethod().getMethodName());
     }
 
     @AfterMethod
@@ -39,10 +39,10 @@ public class BeforeTestng {
 
         String methodName = result.getMethod().getMethodName();
         if (result.getStatus() == 1)
-            ExtentReporter.pass(methodName + " Pass");
+            ExtentManager.pass(methodName + " Pass");
         if (result.getStatus() == 2)
-            ExtentReporter.fail(methodName + "failed");
-        ExtentReporter.endTest();
+            ExtentManager.fail(methodName + "failed");
+        ExtentManager.endTest();
     }
 
     @AfterSuite
