@@ -1,4 +1,4 @@
-package selenium;
+package logger;
 
 import org.apache.log4j.*;
 
