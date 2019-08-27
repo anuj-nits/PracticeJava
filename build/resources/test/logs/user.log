@@ -1,2 +1,6 @@
-2019-08-26 20:14:47 - INFO  Test started 
-2019-08-26 20:14:53 - INFO  Test ended 
+2019-08-27 16:50:17 - INFO  ExtentReporter setup done 
+2019-08-27 16:50:17 - INFO  #######  testing  ####### 
+2019-08-27 16:50:17 - INFO  Test started 
+2019-08-27 16:50:24 - DEBUG Google 
+2019-08-27 16:50:27 - INFO  Test ended 
+2019-08-27 16:50:27 - INFO  testing Pass 
