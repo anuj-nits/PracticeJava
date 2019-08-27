@@ -2,53 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d230a325-0109-415c-8707-2943fb7a87f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_virtuald_curvesapi_1_06.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_relevantcodes_extentreports_2_41_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_codec_commons_codec_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__commons_io_commons_io_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_collections4_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_compress_1_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_poi_poi_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_poi_poi_ooxml_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_poi_poi_ooxml_schemas_4_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apache_xmlbeans_xmlbeans_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jsoup_jsoup_1_8_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mongodb_bson_3_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mongodb_mongodb_driver_3_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_mongodb_mongodb_driver_core_3_0_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_xerial_sqlite_jdbc_3_8_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/excelManager/ExcelManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/extentReport/ExtentReporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/data/sample.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/report/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.0/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.0/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/launch.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/launch.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/launch.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/launch.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/database/Mysql.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/database/Mysql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/logger/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/logger/Log.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/selenium/BeforeTestng.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/selenium/BeforeTestng.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/selenium/Launch.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/selenium/Launch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/withoutDocker/classes/selenium.Launch.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/withoutDocker/classes/selenium.Launch.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/withoutDocker/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/withoutDocker/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/withoutDocker/packages/selenium.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/withoutDocker/packages/selenium.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/logs/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/logs/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/test/logs/user.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/test/logs/user.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/withoutDocker/TEST-selenium.Launch.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/withoutDocker/TEST-selenium.Launch.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/withoutDocker/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/withoutDocker/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/withoutDocker/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/withoutDocker/binary/output.bin.idx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/withoutDocker/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/withoutDocker/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/database/Mysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/database/Mysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/BeforeTestng.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/BeforeTestng.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/selenium/Launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/selenium/Launch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/logs/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/logs/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/logs/user.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/logs/user.log" afterDir="false" />
     </list>
@@ -224,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566899483329</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updated mysql">
+      <created>1566905280906</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1566905280906</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

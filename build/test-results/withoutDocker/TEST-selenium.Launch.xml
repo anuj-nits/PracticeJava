@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="selenium.Launch" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-27T11:20:17" hostname="SSAHMDTL03503" time="10.675">
+<testsuite name="selenium.Launch" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-08-27T11:29:12" hostname="SSAHMDTL03503" time="5.303">
   <properties/>
-  <testcase name="testing" classname="selenium.Launch" time="10.675"/>
-  <system-out><![CDATA[?[m2019-08-27 16:50:17 - INFO  (NativeMethodAccessorImpl.invoke0:-2) - #######  testing  #######?[m
-?[m2019-08-27 16:50:17 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test started?[m
-?[m2019-08-27 16:50:24 - DEBUG (NativeMethodAccessorImpl.invoke:62) - Google?[m
-?[m2019-08-27 16:50:27 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test ended?[m
-?[m2019-08-27 16:50:27 - INFO  (NativeMethodAccessorImpl.invoke0:-2) - testing Pass?[m
+  <testcase name="testing" classname="selenium.Launch" time="5.303"/>
+  <system-out><![CDATA[?[m2019-08-27 16:59:12 - INFO  (NativeMethodAccessorImpl.invoke0:-2) - #######  testing  #######?[m
+?[m2019-08-27 16:59:12 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test started?[m
+?[m2019-08-27 16:59:15 - DEBUG (NativeMethodAccessorImpl.invoke:62) - Google?[m
+?[m2019-08-27 16:59:18 - INFO  (NativeMethodAccessorImpl.invoke:62) - Test ended?[m
+?[m2019-08-27 16:59:18 - INFO  (NativeMethodAccessorImpl.invoke0:-2) - testing Pass?[m
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
