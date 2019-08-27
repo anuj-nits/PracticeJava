@@ -2,7 +2,7 @@ package selenium;
 
 import LogManager.LogManager;
 import csvManager.CsvManager;
-import database.MysqlManager;
+import mysqlManager.MysqlManager;
 import excelManager.ExcelManager;
 import jsonManager.JsonManager;
 import org.testng.annotations.Test;
