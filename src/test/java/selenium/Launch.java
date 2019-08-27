@@ -2,7 +2,9 @@ package selenium;
 
 import database.Mysql;
 import excelManager.ExcelManager;
+import jsonManager.JsonManager;
 import logger.Log;
+import org.openqa.selenium.json.Json;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -14,6 +16,7 @@ public class Launch extends BeforeTestng {
 
         mysql();
         excelManager();
+        jsonManager();
     }
 
     private static void mysql() throws Exception {
@@ -62,6 +65,14 @@ public class Launch extends BeforeTestng {
 
         System.out.println(ExcelManager.getRowAsMap(sheetName, rowNumber));
         System.err.println(ExcelManager.getColumnsAsMap(sheetName));
+    }
+
+    private static void jsonManager() throws Exception {
+
+        System.out.println(JsonManager.readFromJson("id"));
+        JsonManager.writeToJson("name", "Anuj Gupta");
+        System.out.println(JsonManager.readFromJson("name"));
+        JsonManager.writeToJson("id", "1");
     }
 
     @Test
