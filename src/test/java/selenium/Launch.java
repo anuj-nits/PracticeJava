@@ -4,11 +4,13 @@ import database.Mysql;
 import excelManager.ExcelManager;
 import jsonManager.JsonManager;
 import logger.Log;
-import org.openqa.selenium.json.Json;
 import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.Map;
+
+import static csvManager.CsvManager.readFromCSV;
+import static csvManager.CsvManager.writeToCSV;
 
 public class Launch extends BeforeTestng {
 
@@ -17,6 +19,7 @@ public class Launch extends BeforeTestng {
         mysql();
         excelManager();
         jsonManager();
+        csvManager();
     }
 
     private static void mysql() throws Exception {
@@ -67,12 +70,18 @@ public class Launch extends BeforeTestng {
         System.err.println(ExcelManager.getColumnsAsMap(sheetName));
     }
 
-    private static void jsonManager() throws Exception {
+    private static void jsonManager() {
 
         System.out.println(JsonManager.readFromJson("id"));
         JsonManager.writeToJson("name", "Anuj Gupta");
         System.out.println(JsonManager.readFromJson("name"));
         JsonManager.writeToJson("id", "1");
+    }
+
+    private static void csvManager() throws Exception {
+
+        System.out.println(readFromCSV(1, 1));
+        writeToCSV("dandy", 1, 1);
     }
 
     @Test
