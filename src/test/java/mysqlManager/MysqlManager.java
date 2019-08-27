@@ -1,4 +1,4 @@
-package database;
+package mysqlManager;
 
 import LogManager.LogManager;
 
