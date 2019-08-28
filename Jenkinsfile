@@ -8,18 +8,18 @@ node{
         git credentialsId: '23ea5119-e03a-4c2d-8697-8c8a95efd3e6', url: 'https://github.com/anuj-nits/launch.git'
     }
     stage('withoutDocker'){
-        sh './gradlew withoutDocker'
+        gradle 'withoutDocker'
     }
     stage('withDocker'){
-        sh './gradlew withDocker'
+        gradle 'withDocker'
     }
         stage('withoutDockerTestng'){
-        sh './gradlew withoutDockerTestng'
+        gradle 'withoutDockerTestng'
     }
         stage('withDockerTestng'){
-        sh './gradlew withDockerTestng'
+        gradle 'withDockerTestng'
     }
         stage('helloWorld'){
-        sh './gradlew helloWorld'
+        gradle 'helloWorld'
         }
 }
