@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Map;
 
-public class testManager extends BeforeTestng {
+public class TestManager extends BeforeTestng {
 
     public static void main(String[] args) throws Exception {
 

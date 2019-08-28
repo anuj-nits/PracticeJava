@@ -5,7 +5,7 @@
 
     <test name="Launch">
         <classes>
-            <class name="selenium.Launch"/>
+            <class name="testManager.TestManager"/>
         </classes>
     </test>
 

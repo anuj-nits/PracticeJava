@@ -5,7 +5,7 @@
 
     <test name="SeleniumDocker">
         <classes>
-            <class name="selenium.SeleniumDocker"/>
+            <class name="testManager.SeleniumDocker"/>
         </classes>
     </test>
 
