@@ -1,4 +1,4 @@
-package selenium;
+package testManager;
 
 import LogManager.LogManager;
 import org.openqa.selenium.WebDriver;

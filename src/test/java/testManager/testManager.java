@@ -1,4 +1,4 @@
-package selenium;
+package testManager;
 
 import LogManager.LogManager;
 import csvManager.CsvManager;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Map;
 
-public class Launch extends BeforeTestng {
+public class testManager extends BeforeTestng {
 
     public static void main(String[] args) throws Exception {
 
