@@ -1,8 +1,8 @@
 package csvManager;
 
-import LogManager.LogManager;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVWriter;
+import logManager.LogManager;
 
 import java.io.File;
 import java.io.FileReader;

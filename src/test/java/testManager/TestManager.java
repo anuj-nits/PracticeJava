@@ -1,10 +1,10 @@
 package testManager;
 
-import LogManager.LogManager;
 import csvManager.CsvManager;
-import mysqlManager.MysqlManager;
 import excelManager.ExcelManager;
 import jsonManager.JsonManager;
+import logManager.LogManager;
+import mysqlManager.MysqlManager;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -68,12 +68,13 @@ public class TestManager extends BeforeTestng {
         System.err.println(ExcelManager.getColumnsAsMap(sheetName));
     }
 
-    private static void jsonManager() {
+    private static void jsonManager() throws Exception {
 
-        System.out.println(JsonManager.readFromJson("id"));
-        JsonManager.writeToJson("name", "Anuj Gupta");
-        System.out.println(JsonManager.readFromJson("name"));
-        JsonManager.writeToJson("id", "1");
+        Map<String, Object> map = JsonManager.readFromJson();
+        JsonManager.replaceJsonVariable(map, "name", "anuj");
+        JsonManager.replaceJsonVariable(map, "id", "1");
+        JsonManager.replaceJsonVariable(map, "age", "20");
+        JsonManager.writeToJson(map);
     }
 
     private static void csvManager() throws Exception {

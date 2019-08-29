@@ -1,6 +1,6 @@
 package mysqlManager;
 
-import LogManager.LogManager;
+import logManager.LogManager;
 
 import java.sql.*;
 import java.util.*;

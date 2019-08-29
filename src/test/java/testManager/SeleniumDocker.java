@@ -1,6 +1,6 @@
 package testManager;
 
-import LogManager.LogManager;
+import logManager.LogManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;

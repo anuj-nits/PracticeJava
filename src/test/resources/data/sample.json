@@ -1,1 +1,1 @@
-{"prerequisites":[{"name":"Anuj Gupta","id":"1"}]}
+{"name":"${name}","id":"${id}","age":"${age}"}
