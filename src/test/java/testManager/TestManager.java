@@ -106,14 +106,58 @@ public class TestManager extends BeforeTestng {
         Map<String, Object> jsonMap = jsonManager.readFromJson(filePath + ".json");
         jsonMap.putAll(excelData);
         RestAssured.baseURI = PropertyManager.getProperty("api.baseURI");
-        Response response = given().
-                when().
-                header("username", PropertyManager.getProperty("api.username")).
-                header("password", PropertyManager.getProperty("api.password")).
-                header("content-type", PropertyManager.getProperty("api.content-type")).
-                body(jsonMap).
-                post(jsonMap.get("payload").toString());
-        System.out.println(response.asString());
+        Response response = null;
+        switch (excelData.get("method")) {
+
+            case "post":
+                response = given().
+                        when().
+                        header("username", PropertyManager.getProperty("api.username")).
+                        header("password", PropertyManager.getProperty("api.password")).
+                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        body(jsonMap).
+                        post(jsonMap.get("payload").toString());
+                break;
+
+            case "get":
+                response = given().
+                        when().
+                        header("username", PropertyManager.getProperty("api.username")).
+                        header("password", PropertyManager.getProperty("api.password")).
+                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        get(jsonMap.get("payload").toString());
+                break;
+            case "patch":
+                response = given().
+                        when().
+                        header("username", PropertyManager.getProperty("api.username")).
+                        header("password", PropertyManager.getProperty("api.password")).
+                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        body(jsonMap).
+                        patch(jsonMap.get("payload").toString());
+                break;
+            case "delete":
+                response = given().
+                        when().
+                        header("username", PropertyManager.getProperty("api.username")).
+                        header("password", PropertyManager.getProperty("api.password")).
+                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        body(jsonMap).
+                        delete(jsonMap.get("payload").toString());
+                break;
+            case "put":
+                response = given().
+                        when().
+                        header("username", PropertyManager.getProperty("api.username")).
+                        header("password", PropertyManager.getProperty("api.password")).
+                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        body(jsonMap).
+                        put(jsonMap.get("payload").toString());
+                break;
+            default:
+                System.out.println("Invalid response found");
+                break;
+        }
     }
 
     @Test

@@ -1,2 +1,2 @@
-2019-08-30 12:48:57 - INFO  MySQL DB Connection successful 
-2019-08-30 12:48:58 - INFO  Wrote data dandy to csv file at path: src/test/resources/data/sample.csv at row: 1 and column: 1 
+2019-08-30 13:10:14 - INFO  MySQL DB Connection successful 
+2019-08-30 13:10:15 - INFO  Wrote data dandy to csv file at path: src/test/resources/data/sample.csv at row: 1 and column: 1 
