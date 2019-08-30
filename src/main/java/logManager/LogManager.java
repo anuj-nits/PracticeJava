@@ -1,6 +1,7 @@
 package logManager;
 
 import org.apache.log4j.*;
+import propertyManager.PropertyManager;
 
 /**
  * Usage: Utility Logger Class to log each event in console, html log file and a text file
@@ -13,9 +14,9 @@ import org.apache.log4j.*;
  */
 public class LogManager {
 
-    private static LogManager logManager = null;
     // Initializes logger class and gives a name to the logger
     private static Logger logger = Logger.getLogger(" - ");
+
     private static ConsoleAppender consoleAppender = new ConsoleAppender();
     private static String conversionPattern;
 
@@ -23,13 +24,6 @@ public class LogManager {
     private LogManager() {
 
         throw new IllegalStateException("Utility class");
-    }
-
-    public static LogManager getInstance() {
-        if (logManager == null) {
-            logManager = new LogManager();
-        }
-        return logManager;
     }
 
     /**
@@ -51,7 +45,7 @@ public class LogManager {
             HTMLLayout htmlLayout = new HTMLLayout();
 
             // Create HTML file where logs will be generated
-            FileAppender fileAppender = new FileAppender(htmlLayout, "./src/test/resources/logs/user.html", false);
+            FileAppender fileAppender = new FileAppender(htmlLayout, PropertyManager.getProperty("htmlLogsPath"), false);
 
             // Generates new logs on each run by overwriting old logs and not appending to existing ones
             fileAppender.setAppend(false);
@@ -66,7 +60,7 @@ public class LogManager {
             logger.setAdditivity(false);
 
         } catch (Exception e) {
-            LogManager.error(e.getMessage());
+            error(e.getMessage());
         }
     }// End of setHTMLogs
 
@@ -101,7 +95,7 @@ public class LogManager {
             FileAppender fileAppender = new FileAppender();
 
             // Create text log file where logs will be generated
-            fileAppender.setFile("./src/test/resources/logs/user.log");
+            fileAppender.setFile(PropertyManager.getProperty("userLogsPath"));
 
             // Initialize reference variable for pattern layout class
             PatternLayout layout = new PatternLayout();
@@ -126,7 +120,7 @@ public class LogManager {
             logger.setAdditivity(false);
 
         } catch (Exception e) {
-            LogManager.error(e.getMessage());
+            error(e.getMessage());
         }
     }// End of setUserLogs
 
@@ -158,7 +152,7 @@ public class LogManager {
             logger.info(message);
 
         } catch (Exception e) {
-            LogManager.error(e.getMessage());
+            error(e.getMessage());
         }
     }// End of info
 
@@ -223,7 +217,7 @@ public class LogManager {
             logger.debug(message);
 
         } catch (Exception e) {
-            LogManager.error(e.getMessage());
+            error(e.getMessage());
         }
     }// End of debug
 
@@ -249,7 +243,7 @@ public class LogManager {
             return "(" + className + "." + methodName + ":" + lineNumber + ")";
 
         } catch (Exception e) {
-            LogManager.error(e.getMessage());
+            error(e.getMessage());
         }
         return "";
     }// End of getStackTrace

@@ -1,6 +1,2 @@
-2019-08-29 16:53:17 - INFO  ExtentReporter setup done 
-2019-08-29 16:53:17 - INFO  #######  testing  ####### 
-2019-08-29 16:53:17 - INFO  Test started 
-2019-08-29 16:53:19 - DEBUG Google 
-2019-08-29 16:53:22 - INFO  Test ended 
-2019-08-29 16:53:22 - INFO  testing Pass 
+2019-08-30 12:47:18 - INFO  MySQL DB Connection successful 
+2019-08-30 12:47:19 - INFO  Wrote data dandy to csv file at path: src/test/resources/data/sample.csv at row: 1 and column: 1 

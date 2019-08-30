@@ -16,14 +16,27 @@ public class ExcelManager {
     private static Workbook workbook;
     private static Sheet sheet;
     private static FileInputStream fis;
-    private static String workBookPath = System.getProperty("user.dir") + "/src/test/resources/data/sample.xlsx";
+    private static ExcelManager excel;
+    private static String workBookPath;
+
+    //To prevent users to create new objects of this class
+    private ExcelManager() {
+    }
+
+    public static ExcelManager getInstance(String workbookPath) {
+
+        ExcelManager.workBookPath = workbookPath;
+        if (excel == null)
+            excel = new ExcelManager();
+        return excel;
+    }
 
     /**
      * Opens the file input stream
      *
      * @author anuj gupta
      */
-    private static void openInputStream() throws Exception {
+    private void openInputStream() throws Exception {
 
         fis = new FileInputStream(workBookPath);
 
@@ -40,7 +53,7 @@ public class ExcelManager {
      *
      * @author anuj gupta
      */
-    private static void closeInputStream() throws Exception {
+    private void closeInputStream() throws Exception {
 
         fis.close();
     }
@@ -52,7 +65,7 @@ public class ExcelManager {
      * @return Number of columns in excel
      * @author anuj gupta
      */
-    private static Integer getColumnCount(String sheetName) {
+    private Integer getColumnCount(String sheetName) {
 
         // Get sheet with the given name
         sheet = workbook.getSheet(sheetName);
@@ -68,7 +81,7 @@ public class ExcelManager {
      * @return Number of rows in excel
      * @author anuj gupta
      */
-    private static Integer getRowCount(String sheetName) {
+    private Integer getRowCount(String sheetName) {
 
         // Get sheet with the given name
         sheet = workbook.getSheet(sheetName);
@@ -84,7 +97,7 @@ public class ExcelManager {
      * @return value of cell in string format
      * @author anuj gupta
      */
-    private static String getCellData(String sheetName, int rowNumber, int columnNumber) throws Exception {
+    private String getCellData(String sheetName, int rowNumber, int columnNumber) throws Exception {
 
         String data = "";
         openInputStream();
@@ -124,7 +137,7 @@ public class ExcelManager {
      * @return Data of the entire row in a Map
      * @author anuj gupta
      */
-    public static Map<String, String> getRowAsMap(String sheetName, int rowNumber) throws Exception {
+    public Map<String, String> getRowAsMap(String sheetName, int rowNumber) throws Exception {
 
         // Stores data of each row
         Map<String, String> rowData = new HashMap<>();
@@ -144,7 +157,7 @@ public class ExcelManager {
      * @return Data of the entire column in a Map
      * @author anuj gupta
      */
-    public static Map<String, String> getColumnsAsMap(String sheetName) throws Exception {
+    public Map<String, String> getColumnsAsMap(String sheetName) throws Exception {
 
         Map<String, String> columnData = new HashMap<>();
         openInputStream();

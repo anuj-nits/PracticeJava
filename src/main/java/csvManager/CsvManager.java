@@ -11,19 +11,29 @@ import java.util.List;
 
 public class CsvManager {
 
-    private static String filePath = System.getProperty("user.dir") + "/src/test/resources/data/sample.csv";
+    private static CsvManager csvManager;
+    private static String csvPath;
+
+    public static CsvManager getInstance(String csvPath) {
+
+        CsvManager.csvPath = csvPath;
+        if (csvManager == null)
+            csvManager = new CsvManager();
+
+        return csvManager;
+    }
 
     /**
      * Writes data to csv file
      *
-     * @param data     Data to be entered in csv file in a particular cell
-     * @param row      Row number in which data needs to be entered
-     * @param col      Column number in which data needs to be entered
+     * @param data Data to be entered in csv file in a particular cell
+     * @param row  Row number in which data needs to be entered
+     * @param col  Column number in which data needs to be entered
      * @author anuj gupta
      */
-    public static void writeToCSV(String data, int row, int col) throws Exception {
+    public void writeToCSV(String data, int row, int col) throws Exception {
 
-        File inputFile = new File(filePath);
+        File inputFile = new File(csvPath);
         List<String[]> csvBody;
 
         // Read existing file
@@ -38,19 +48,19 @@ public class CsvManager {
             writer.writeAll(csvBody);
             writer.flush();
         }
-        LogManager.info("Wrote data " + data + " to csv file at path: " + filePath + " at row: " + row + " and column: " + col);
+        LogManager.info("Wrote data " + data + " to csv file at path: " + csvPath + " at row: " + row + " and column: " + col);
     }
 
     /**
      * Writes data to csv file
      *
-     * @param row      Row number in which data needs to be entered
-     * @param col      Column number in which data needs to be entered
+     * @param row Row number in which data needs to be entered
+     * @param col Column number in which data needs to be entered
      * @author anuj gupta
      */
-    public static String readFromCSV(int row, int col) throws Exception {
+    public String readFromCSV(int row, int col) throws Exception {
 
-        File inputFile = new File(filePath);
+        File inputFile = new File(csvPath);
         String data;
 
         // Read existing file

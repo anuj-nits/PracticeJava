@@ -1,65 +1,64 @@
 package mysqlManager;
 
 import logManager.LogManager;
+import propertyManager.PropertyManager;
 
 import java.sql.*;
 import java.util.*;
 
 public class MysqlManager {
 
-    private static MysqlManager mySQL = null;
-
+    private static MysqlManager mysqlManager;
+    private MysqlManager mySQL = null;
     // Stores object of connection interface
-    private static Connection connection;
-
+    private Connection connection;
     // Stores result of query executed
-    private static ResultSet resultSet;
-
+    private ResultSet resultSet;
     // An object used to get information about the types and properties of the columns in a ResultSet object
-    private static ResultSetMetaData resultSetMetaData;
-
+    private ResultSetMetaData resultSetMetaData;
     // List to store resultSet
-    private static List<String> columnValues;
-
+    private List<String> columnValues;
     // String to store first value in resultSet
-    private static String firstCellValue;
-
+    private String firstCellValue;
     // String to store query to be executed
-    private static String query;
-
+    private String query;
     // Object used for executing a static SQL statement and returning the results it produces
-    private static Statement statement;
+    private Statement statement;
+
+    private MysqlManager() {
+    }
 
     /**
      * Singleton method to create only a single instance of the MySQL class
      *
      * @return Object of MySQL class
      */
-    private static MysqlManager getInstance() {
+    public static MysqlManager getInstance() {
 
-        if (mySQL == null)
-            mySQL = new MysqlManager();
+        if (mysqlManager == null)
+            mysqlManager = new MysqlManager();
 
-        return mySQL;
+        return mysqlManager;
     }
 
     /**
      * Establish database connection
      *
-     * @return Connection object of the database(Validation or Functional)
      * @author Anuj Gupta
      */
-    public static Connection createConnection() throws Exception {
+    public void createConnection() throws Exception {
+
+        String driverClass = PropertyManager.getProperty("mysql.driverClass");
+        String dbUrl = PropertyManager.getProperty("mysql.dbUrl");
+        String username = PropertyManager.getProperty("mysql.username");
+        String password = PropertyManager.getProperty("mysql.password");
 
         // Returns the Class object associated with the class or interface with the given string name
-        Class.forName("com.mysql.cj.jdbc.Driver");
+        Class.forName(driverClass);
 
         // Attempts to establish a connection to the given database URL
-        connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Selenium", "root", "root");
-
-        //Log.info("MySQL DB Connection successful");
-
-        return connection;
+        connection = DriverManager.getConnection(dbUrl, username, password);
+        LogManager.info("MySQL DB Connection successful");
     }
 
     /**
@@ -67,7 +66,7 @@ public class MysqlManager {
      *
      * @author Anuj Gupta
      */
-    public static void closeConnection() throws Exception {
+    public void closeConnection() throws Exception {
 
         // Checks if the connection is not already closed
         if (!connection.isClosed()) {
@@ -83,7 +82,7 @@ public class MysqlManager {
      * @return Count of rows in database table
      * @author Anuj Gupta
      */
-    public static Integer getRowCount(String tableName) throws Exception {
+    public Integer getRowCount(String tableName) throws Exception {
 
         // Query to store count of rows in table 'tableName'
         String query = "select count(*) as rows from " + tableName;
@@ -107,7 +106,7 @@ public class MysqlManager {
      * @return Count of rows in a database table where a particular column has a specific value condition
      * @author Anuj Gupta
      */
-    public static Integer getPartialRowCount(String tableName, String columnName, String columnValue) throws Exception {
+    public Integer getPartialRowCount(String tableName, String columnName, String columnValue) throws Exception {
 
         // Query to get number of rows which satisfy a particular condition
         String rowQuery = "SELECT count(*) as rows from " + tableName + " where `" + columnName + "` = '" + columnValue + "'";
@@ -130,7 +129,7 @@ public class MysqlManager {
      * @return Result of the query executed as list of strings
      * @author Anuj Gupta
      */
-    private static List<String> getQuery(String query, String columnName) throws Exception {
+    private List<String> getQuery(String query, String columnName) throws Exception {
 
         // Initialize statement object
         statement = connection.createStatement();
@@ -155,7 +154,7 @@ public class MysqlManager {
      * @return boolean
      * @author Anuj Gupta
      */
-    public static boolean isExecutable(String tableName) throws Exception {
+    public boolean isExecutable(String tableName) throws Exception {
 
         // Variable to store string cell data
         firstCellValue = "";
@@ -180,7 +179,7 @@ public class MysqlManager {
      * @return Number of columns in a database table
      * @author Anuj Gupta
      */
-    public static Integer getColumnCount(String tableName) throws Exception {
+    public Integer getColumnCount(String tableName) throws Exception {
 
         // Stores list of all the connected databases
         List<String> databaseName = getQuery("SELECT DATABASE()", "Database()");
@@ -207,7 +206,7 @@ public class MysqlManager {
      * @return 2D Array containing database column names and its value in its respective dimensions
      * @author Anuj Gupta
      */
-    public static Object[][] tableToObject(String tableName) throws Exception {
+    public Object[][] tableToObject(String tableName) throws Exception {
 
         HashMap<String, String> data;
 
@@ -250,7 +249,7 @@ public class MysqlManager {
      * @param columnValue       Contains column value that will identify the row for which the value needs to be updated
      * @author Anuj Gupta
      */
-    public static void updateCellData(String tableName, String columnName, String columnValue, String columnToBeUpdated, String valueToBeSet) throws Exception {
+    public void updateCellData(String tableName, String columnName, String columnValue, String columnToBeUpdated, String valueToBeSet) throws Exception {
 
         // Creates statement
         statement = connection.createStatement();
@@ -275,7 +274,7 @@ public class MysqlManager {
      * @return Value of the cell
      * @author Anuj Gupta
      */
-    public static String getCellData(String tableName, String resultColumnName, String columnName, String columnValue) throws Exception {
+    public String getCellData(String tableName, String resultColumnName, String columnName, String columnValue) throws Exception {
 
         // Creates statement
         statement = connection.createStatement();
@@ -299,7 +298,7 @@ public class MysqlManager {
      * @return Hashmap which contains row data(key = column name, value = column value)
      * @author Anuj Gupta
      */
-    public static HashMap<String, String> getRowData(String tableName, String columnName, String columnValue) throws Exception {
+    public HashMap<String, String> getRowData(String tableName, String columnName, String columnValue) throws Exception {
 
         HashMap<String, String> results = null;
 
@@ -347,7 +346,7 @@ public class MysqlManager {
      * @return Only those rows of database as a list of Map where a particular column has a specific value
      * @author Anuj Gupta
      */
-    public static List<Map<String, String>> getMultipleRowData(String tableName, String columnName, String columnValue) throws Exception {
+    public List<Map<String, String>> getMultipleRowData(String tableName, String columnName, String columnValue) throws Exception {
 
         HashMap<String, String> results;
         List<Map<String, String>> resultList = null;
@@ -399,7 +398,7 @@ public class MysqlManager {
      * @param tableName Name of the database Table
      * @return All the rows of database as a list of Map
      */
-    public static List<Map<String, String>> getTableData(String tableName) throws Exception {
+    public List<Map<String, String>> getTableData(String tableName) throws Exception {
 
         HashMap<String, String> results;
         List<Map<String, String>> resultList;

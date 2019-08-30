@@ -51,4 +51,6 @@ dependencies {
     compile group: 'com.opencsv', name: 'opencsv', version: '4.6'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-core', version: '2.9.8'
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
+    compile group: 'io.rest-assured', name: 'rest-assured', version: '4.0.0'
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.8', ext: 'pom'
 }
