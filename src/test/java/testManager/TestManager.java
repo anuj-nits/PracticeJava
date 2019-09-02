@@ -10,10 +10,12 @@ import mysqlManager.MysqlManager;
 import org.testng.annotations.Test;
 import propertyManager.PropertyManager;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.testng.Assert.assertEquals;
 
 public class TestManager extends BeforeTestng {
 
@@ -107,14 +109,17 @@ public class TestManager extends BeforeTestng {
         jsonMap.putAll(excelData);
         RestAssured.baseURI = PropertyManager.getProperty("api.baseURI");
         Response response = null;
+        Map<String, Object> headerMap = new HashMap<>();
+        headerMap.put("username", PropertyManager.getProperty("api.username"));
+        headerMap.put("password", PropertyManager.getProperty("api.password"));
+        headerMap.put("content-type", PropertyManager.getProperty("api.content-type"));
+
         switch (excelData.get("method")) {
 
             case "post":
                 response = given().
                         when().
-                        header("username", PropertyManager.getProperty("api.username")).
-                        header("password", PropertyManager.getProperty("api.password")).
-                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        headers(headerMap).
                         body(jsonMap).
                         post(jsonMap.get("payload").toString());
                 break;
@@ -122,35 +127,27 @@ public class TestManager extends BeforeTestng {
             case "get":
                 response = given().
                         when().
-                        header("username", PropertyManager.getProperty("api.username")).
-                        header("password", PropertyManager.getProperty("api.password")).
-                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        headers(headerMap).
                         get(jsonMap.get("payload").toString());
                 break;
             case "patch":
                 response = given().
                         when().
-                        header("username", PropertyManager.getProperty("api.username")).
-                        header("password", PropertyManager.getProperty("api.password")).
-                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        headers(headerMap).
                         body(jsonMap).
                         patch(jsonMap.get("payload").toString());
                 break;
             case "delete":
                 response = given().
                         when().
-                        header("username", PropertyManager.getProperty("api.username")).
-                        header("password", PropertyManager.getProperty("api.password")).
-                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        headers(headerMap).
                         body(jsonMap).
                         delete(jsonMap.get("payload").toString());
                 break;
             case "put":
                 response = given().
                         when().
-                        header("username", PropertyManager.getProperty("api.username")).
-                        header("password", PropertyManager.getProperty("api.password")).
-                        header("content-type", PropertyManager.getProperty("api.content-type")).
+                        headers(headerMap).
                         body(jsonMap).
                         put(jsonMap.get("payload").toString());
                 break;
@@ -158,6 +155,8 @@ public class TestManager extends BeforeTestng {
                 System.out.println("Invalid response found");
                 break;
         }
+        assert response != null;
+        assertEquals(response.getStatusCode(), Integer.parseInt(excelData.get("statusCode")));
     }
 
     @Test
