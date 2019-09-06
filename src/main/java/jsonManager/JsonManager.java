@@ -5,6 +5,7 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
+import java.util.HashMap;
 import java.util.Map;
 
 public class JsonManager {
@@ -20,6 +21,14 @@ public class JsonManager {
         return jsonManager;
     }
 
+    public static void main(String[] args) throws Exception {
+
+        jsonManager = new JsonManager();
+        Map<String, Object> map = jsonManager.readFromJson("./src/test/resources/data/createCustomer.json");
+        for (Map.Entry<String, Object> m : map.entrySet())
+            System.out.println(m.getKey() + ": " + m.getValue());
+    }
+
     public void replaceJsonVariable(Map<String, Object> map, String key, String value) {
 
         if (map.get(key).toString().contains(key))
@@ -28,7 +37,7 @@ public class JsonManager {
 
     public Map<String, Object> readFromJson(String filePath) throws Exception {
 
-        return mapper.readValue(new File(filePath), new TypeReference<Map<String, Object>>() {
+        return mapper.readValue(new File(filePath), new TypeReference<HashMap>() {
         });
     }
 

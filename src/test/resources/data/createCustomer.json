@@ -1,0 +1,125 @@
+{
+  "ipAddress": "192.168.1.19",
+  "customerAccountDetail": {
+    "fullName": "${fullName}",
+    "billingArea": "Default",
+    "tenantId": 0,
+    "customerCategory": "${customerCategory}",
+    "staffId": "S000042",
+    "staffName": "StliQA Auto",
+    "createDate": "${createDate}",
+    "contactMedium": [
+      {
+        "type": "EMAIL",
+        "medium": [
+          {
+            "type": "EMAIL",
+            "emailAddress": "sidd@sidd.com"
+          },
+          {
+            "type": "MOBILE",
+            "number": "${mobileNumber}"
+          },
+          {
+            "type": "REGISTEREDMOBILE",
+            "number": "${mobileNumber}"
+          }
+        ]
+      },
+      {
+        "type": "POSTALADDRESS",
+        "medium": [
+          {
+            "type": "POSTALADDRESS",
+            "streetOne": "a",
+            "city": "Ahmedabad",
+            "stateOrProvince": "Gujarat",
+            "country": "India",
+            "postcode": ""
+          }
+        ]
+      }
+    ]
+  },
+  "billingAccountDetail": {
+    "fullName": "testFEB",
+    "billFormat": "Detailed",
+    "billPresentationMedia": "E-Mail",
+    "billingCycleSpecificationName": "${billingCycleSpecificationName}",
+    "currencyCode": "INR",
+    "createDate": "${createDate}",
+    "creditClassRef": {
+      "creditClass": "${creditClass}",
+      "creditLimit": "0"
+    },
+    "contactMedium": [
+      {
+        "type": "EMAIL",
+        "medium": [
+          {
+            "type": "EMAIL",
+            "emailAddress": "ba@sidd.com"
+          },
+          {
+            "type": "MOBILE",
+            "number": "${mobileNumber}"
+          }
+        ]
+      },
+      {
+        "type": "POSTALADDRESS",
+        "medium": [
+          {
+            "type": "POSTALADDRESS",
+            "streetOne": "aa",
+            "city": "Ahmedabad",
+            "stateOrProvince": "Gujarat",
+            "country": "India",
+            "postcode": ""
+          }
+        ]
+      }
+    ]
+  },
+  "serviceAccountDetail": {
+    "fullName": "test28",
+    "createDate": "${createDate}",
+    "contactMedium": [
+      {
+        "type": "EMAIL",
+        "medium": [
+          {
+            "type": "EMAIL",
+            "emailAddress": "sa@sidd.com"
+          },
+          {
+            "type": "MOBILE",
+            "number": "${mobileNumber}"
+          }
+        ]
+      },
+      {
+        "type": "POSTALADDRESS",
+        "medium": [
+          {
+            "type": "POSTALADDRESS",
+            "streetOne": "sa",
+            "city": "Ahmedabad",
+            "stateOrProvince": "Gujarat",
+            "country": "India",
+            "postcode": ""
+          }
+        ]
+      }
+    ]
+  },
+  "serviceInstanceDetail": {
+    "businessHierarchy": "${businessHierarchy}",
+    "createDate": "${createDate}",
+    "serviceInstanceStatus": "ACTIVE",
+    "billingStatus": "ENABLE",
+    "basicProduct": {
+      "name": "${basicProduct.name}"
+    }
+  }
+}
