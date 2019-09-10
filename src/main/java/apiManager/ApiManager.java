@@ -4,7 +4,6 @@ import excelManager.ExcelManager;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import jsonManager.JsonManager;
-import org.testng.Assert;
 import propertyManager.PropertyManager;
 
 import java.util.HashMap;
@@ -27,7 +26,7 @@ public class ApiManager {
         return apiManager;
     }
 
-    public void callApi(String apiName) throws Exception {
+    public Response callApi(String apiName) throws Exception {
 
         String filePath = PropertyManager.getProperty("baseDataPath") + apiName;
         Map<String, String> excelData = excelManager.getRowAsMap(apiName, 1);
@@ -82,6 +81,6 @@ public class ApiManager {
                 break;
         }
         assert response != null;
-        Assert.assertEquals(response.getStatusCode(), Integer.parseInt(excelData.get("statusCode")));
+        return response;
     }
 }
