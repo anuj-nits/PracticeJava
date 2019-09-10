@@ -1,4 +1,5 @@
-# PracticeJava ![logo](https://github.com/anuj-nits/PracticeJava/blob/master/java.jpg) 
+# PracticeJava
+<img align="right" width="100" height="100" src="https://github.com/anuj-nits/PracticeJava/blob/master/java.jpg">
 
 A test project to understand the basics of Apache POI, CSV, Extent Reporting, Json, Log4j, MySql, Property file, Rest Assured & Selenium in Java.
 
