@@ -2,6 +2,9 @@
 
 A test project to understand the basics of Apache POI, CSV, Extent Reporting, Json, Log4j, MySql, Property file, Rest Assured & Selenium in Java.
 
+All classes utilizes singleton approach to create objects only once and use them across.
+Also contains jenkinsfile & docker-compose to test very basic selenium script.
+
 ## Apache POI
 ```java
 getColumnCount()       // given the sheetname, it returns the count of column of any excel sheet
