@@ -57,3 +57,7 @@ tableToObject()        // converts the table into a 2d array object
 ```java
 getProperty()          // loads property file and return required value
 ```
+### Rest Assured
+``` java
+callApi()             // It can handle post, get, patch, put & delete requests. It requires the method's argument to be same as the json file name. If there are variables in json file, create an excel sheet with sheet name same as the api name and provide all json values into it. The payload, status code & request type is to be provided from the excel sheet
+```
