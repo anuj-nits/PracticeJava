@@ -1,2 +1,5 @@
-2019-09-06 14:11:40 - INFO  MySQL DB Connection successful 
-2019-09-06 14:11:41 - INFO  Wrote data dandy to csv file at path: src/test/resources/data/sample.csv at row: 1 and column: 1 
+2019-09-06 15:04:47 - INFO  ExtentReporter setup done 
+2019-09-06 15:04:47 - INFO  #######  runTestOnDocker  ####### 
+2019-09-06 15:04:47 - INFO  Test started 
+2019-09-06 15:04:47 - INFO  Screenshot captured 
+2019-09-06 15:04:47 - ERROR runTestOnDockerfailed 

@@ -46,7 +46,7 @@ public class MysqlManager {
      *
      * @author Anuj Gupta
      */
-    public void createConnection() throws Exception {
+    private void createConnection() throws Exception {
 
         String driverClass = PropertyManager.getProperty("mysql.driverClass");
         String dbUrl = PropertyManager.getProperty("mysql.dbUrl");
@@ -66,7 +66,7 @@ public class MysqlManager {
      *
      * @author Anuj Gupta
      */
-    public void closeConnection() throws Exception {
+    private void closeConnection() throws Exception {
 
         // Checks if the connection is not already closed
         if (!connection.isClosed()) {
@@ -82,7 +82,7 @@ public class MysqlManager {
      * @return Count of rows in database table
      * @author Anuj Gupta
      */
-    public Integer getRowCount(String tableName) throws Exception {
+    private Integer getRowCount(String tableName) throws Exception {
 
         // Query to store count of rows in table 'tableName'
         String query = "select count(*) as rows from " + tableName;
@@ -106,7 +106,7 @@ public class MysqlManager {
      * @return Count of rows in a database table where a particular column has a specific value condition
      * @author Anuj Gupta
      */
-    public Integer getPartialRowCount(String tableName, String columnName, String columnValue) throws Exception {
+    private Integer getPartialRowCount(String tableName, String columnName, String columnValue) throws Exception {
 
         // Query to get number of rows which satisfy a particular condition
         String rowQuery = "SELECT count(*) as rows from " + tableName + " where `" + columnName + "` = '" + columnValue + "'";
@@ -179,7 +179,7 @@ public class MysqlManager {
      * @return Number of columns in a database table
      * @author Anuj Gupta
      */
-    public Integer getColumnCount(String tableName) throws Exception {
+    private Integer getColumnCount(String tableName) throws Exception {
 
         // Stores list of all the connected databases
         List<String> databaseName = getQuery("SELECT DATABASE()", "Database()");
@@ -206,7 +206,7 @@ public class MysqlManager {
      * @return 2D Array containing database column names and its value in its respective dimensions
      * @author Anuj Gupta
      */
-    public Object[][] tableToObject(String tableName) throws Exception {
+    private Object[][] tableToObject(String tableName) throws Exception {
 
         HashMap<String, String> data;
 
@@ -249,7 +249,7 @@ public class MysqlManager {
      * @param columnValue       Contains column value that will identify the row for which the value needs to be updated
      * @author Anuj Gupta
      */
-    public void updateCellData(String tableName, String columnName, String columnValue, String columnToBeUpdated, String valueToBeSet) throws Exception {
+    private void updateCellData(String tableName, String columnName, String columnValue, String columnToBeUpdated, String valueToBeSet) throws Exception {
 
         // Creates statement
         statement = connection.createStatement();
@@ -274,7 +274,7 @@ public class MysqlManager {
      * @return Value of the cell
      * @author Anuj Gupta
      */
-    public String getCellData(String tableName, String resultColumnName, String columnName, String columnValue) throws Exception {
+    private String getCellData(String tableName, String resultColumnName, String columnName, String columnValue) throws Exception {
 
         // Creates statement
         statement = connection.createStatement();
@@ -298,7 +298,7 @@ public class MysqlManager {
      * @return Hashmap which contains row data(key = column name, value = column value)
      * @author Anuj Gupta
      */
-    public HashMap<String, String> getRowData(String tableName, String columnName, String columnValue) throws Exception {
+    private HashMap<String, String> getRowData(String tableName, String columnName, String columnValue) throws Exception {
 
         HashMap<String, String> results = null;
 
@@ -346,7 +346,7 @@ public class MysqlManager {
      * @return Only those rows of database as a list of Map where a particular column has a specific value
      * @author Anuj Gupta
      */
-    public List<Map<String, String>> getMultipleRowData(String tableName, String columnName, String columnValue) throws Exception {
+    private List<Map<String, String>> getMultipleRowData(String tableName, String columnName, String columnValue) throws Exception {
 
         HashMap<String, String> results;
         List<Map<String, String>> resultList = null;
@@ -398,7 +398,7 @@ public class MysqlManager {
      * @param tableName Name of the database Table
      * @return All the rows of database as a list of Map
      */
-    public List<Map<String, String>> getTableData(String tableName) throws Exception {
+    private List<Map<String, String>> getTableData(String tableName) throws Exception {
 
         HashMap<String, String> results;
         List<Map<String, String>> resultList;
@@ -435,7 +435,45 @@ public class MysqlManager {
             }
             resultList.add(results);
         }
-
         return resultList;
+    }
+
+    public void mysql() throws Exception {
+
+        String tableName = "Authors";
+        String nameColumn = "Name";
+        String idColumn = "Id";
+        String idColumnValue = "1";
+        String nameColumnValue = "Jack London";
+        String updatedName = "Jakson London";
+
+        createConnection();
+        System.out.println(getRowCount(tableName));
+        System.err.println(getColumnCount(tableName));
+        System.out.println(getPartialRowCount(tableName, nameColumn, nameColumnValue));
+        System.err.println(getCellData(tableName, nameColumn, idColumn, idColumnValue));
+
+        Object[][] ooo = tableToObject(tableName);
+        for (Object[] oo : ooo)
+            for (Object o : oo)
+                System.out.println(o.toString());
+
+        Map<String, String> m = getRowData(tableName, idColumn, idColumnValue);
+        for (Map.Entry<String, String> e : m.entrySet())
+            System.err.println(e.getKey() + ": " + e.getValue());
+
+        List<Map<String, String>> l = getMultipleRowData(tableName, idColumn, idColumnValue);
+
+        for (Map<String, String> ll : l)
+            for (Map.Entry<String, String> e : ll.entrySet())
+                System.out.println(e.getKey() + ": " + e.getValue());
+
+        List<Map<String, String>> lll = getTableData(tableName);
+        for (Map<String, String> ll : lll)
+            for (Map.Entry<String, String> e : ll.entrySet())
+                System.err.println(e.getKey() + ": " + e.getValue());
+
+        updateCellData(tableName, idColumn, idColumnValue, nameColumn, updatedName);
+        closeConnection();
     }
 }

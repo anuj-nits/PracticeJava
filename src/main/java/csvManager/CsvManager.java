@@ -31,7 +31,7 @@ public class CsvManager {
      * @param col  Column number in which data needs to be entered
      * @author anuj gupta
      */
-    public void writeToCSV(String data, int row, int col) throws Exception {
+    private void writeToCSV(String data, int row, int col) throws Exception {
 
         File inputFile = new File(csvPath);
         List<String[]> csvBody;
@@ -58,7 +58,7 @@ public class CsvManager {
      * @param col Column number in which data needs to be entered
      * @author anuj gupta
      */
-    public String readFromCSV(int row, int col) throws Exception {
+    private String readFromCSV(int row, int col) throws Exception {
 
         File inputFile = new File(csvPath);
         String data;
@@ -71,5 +71,11 @@ public class CsvManager {
             data = csvBody.get(row)[col];
         }
         return data;
+    }
+
+    public void csvManager() throws Exception {
+
+        System.out.println(readFromCSV(1, 1));
+        writeToCSV("dandy", 1, 1);
     }
 }

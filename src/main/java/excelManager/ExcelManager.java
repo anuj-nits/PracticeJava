@@ -157,7 +157,7 @@ public class ExcelManager {
      * @return Data of the entire column in a Map
      * @author anuj gupta
      */
-    public Map<String, String> getColumnsAsMap(String sheetName) throws Exception {
+    private Map<String, String> getColumnsAsMap(String sheetName) throws Exception {
 
         Map<String, String> columnData = new HashMap<>();
         openInputStream();
@@ -168,5 +168,14 @@ public class ExcelManager {
 
         closeInputStream();
         return columnData;
+    }
+
+    public void excelManager() throws Exception {
+
+        String sheetName = "Sheet1";
+        int rowNumber = 1;
+
+        System.out.println(getRowAsMap(sheetName, rowNumber));
+        System.err.println(getColumnsAsMap(sheetName));
     }
 }

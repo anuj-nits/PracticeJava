@@ -1,7 +1,0 @@
-{
-  "city": "${city}",
-  "state": "${state}",
-  "country": "${country}",
-  "status": "${status}",
-  "ipAddress": "${ipAddress}"
-}
