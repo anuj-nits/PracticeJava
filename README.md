@@ -1,4 +1,4 @@
-# launch
+# PracticeJava
 
 A test project to understand the basics of Apache POI, CSV, Extent Reporting, Json, Log4j, MySql, Property file, Rest Assured & Selenium in Java.
 
