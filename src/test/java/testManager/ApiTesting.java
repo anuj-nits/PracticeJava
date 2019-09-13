@@ -1,6 +1,7 @@
 package testManager;
 
 import apiManager.ApiManager;
+import io.restassured.path.json.JsonPath;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
@@ -17,16 +18,22 @@ public class ApiTesting {
         data.put("apiName", "dissociateDiscount");
         data.put("accountNumber", "ELITE010188");
         data.put("discountName", "Customer_StliQA_301051139");
-        String result = apiManager.api(data);
-        System.err.println(result);
+        JsonPath result = apiManager.api(data);
+        int responseCode = result.get("responseCode");
+        String responseMessage = result.get("responseMessage");
+        System.out.println(responseCode);
+        System.out.println(responseMessage);
     }
 
     @Test(priority = 2)
     public void createCity() throws Exception {
 
         data.put("apiName", "createCity");
-        String result = apiManager.api(data);
-        System.err.println(result);
+        JsonPath result = apiManager.api(data);
+        int responseCode = result.get("responseCode");
+        String responseMessage = result.get("responseMessage");
+        System.out.println(responseCode);
+        System.out.println(responseMessage);
     }
 
     @Test(priority = 3)
@@ -37,7 +44,10 @@ public class ApiTesting {
         data.put("customerCategory", "Default");
         data.put("emailId", "Smith@gmail.com");
         data.put("mobileNumber", "1234567890");
-        String result = apiManager.api(data);
-        System.err.println(result);
+        JsonPath result = apiManager.api(data);
+        int responseCode = result.get("responseCode");
+        String responseMessage = result.get("responseMessage");
+        System.out.println(responseCode);
+        System.out.println(responseMessage);
     }
 }

@@ -2,6 +2,7 @@ package apiManager;
 
 import excelManager.ExcelManager;
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import logManager.LogManager;
@@ -50,7 +51,7 @@ public class ApiManager {
         return jsonFileToString;
     }
 
-    public String api(Map<String, String> d) throws Exception {
+    public JsonPath api(Map<String, String> d) throws Exception {
 
         LogManager.setup();
         data = excelManager.getRowAsMap(d.get("apiName"), 1);
@@ -99,6 +100,6 @@ public class ApiManager {
         }
         assert response != null;
         response.then().assertThat().statusCode(200);
-        return response.asString();
+        return response.jsonPath();
     }
 }
