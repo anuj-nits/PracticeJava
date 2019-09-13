@@ -6,8 +6,8 @@ A test project to understand the basics of Apache POI, CSV, Extent Reporting, Js
 All classes utilizes singleton approach to create objects only once and use them across.
 Also contains jenkinsfile & docker-compose to test very basic selenium script.
 
-## Docker Images used:
-</br>Selenium/hub:latest
+## Docker Images used
+Selenium/hub:latest
 </br>Selenium/node-chrome-debug:latest
 </br>Selenium/node-firefox-debug:latest
 
@@ -70,5 +70,5 @@ getProperty()          // loads property file and return required value
 ```
 ### [Rest Assured](https://github.com/anuj-nits/PracticeJava/tree/master/src/main/java/apiManager)
 ``` java
-callApi()             // It can handle post, get, patch, put & delete requests. It requires the method's argument to be same as the json file name. If there are variables in json file, create an excel sheet with sheet name same as the api name and provide all json values into it. The payload, status code & request type is to be provided from the excel sheet
+api()                  // It can handle post, get, patch, put & delete requests. It requires the method's argument to be same as the json file name. If there are variables in json file, create an excel sheet with sheet name same as the api name and provide all json values into it. The payload, status code & request type is to be provided from the excel sheet
 ```
