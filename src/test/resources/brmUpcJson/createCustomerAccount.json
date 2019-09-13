@@ -1,0 +1,94 @@
+{
+  "ipAddress": "127.0.0.1",
+  "fullName": "Automation",
+  "billingArea": "Default",
+  "tenantId": 0,
+  "customerCategory": "Default",
+  "action": {
+    "sourceChannel": "OM"
+  },
+  "identificationRef": [
+    {
+      "type": "Passport",
+      "identificationId": "rew798564"
+    },
+    {
+      "type": "Customer Unique Number",
+      "identificationId": "rew44958465"
+    },
+    {
+      "type": "Driving License",
+      "identificationId": "dqwd23123"
+    }
+  ],
+  "contactMedium": [
+    {
+      "type": "EMAIL",
+      "medium": [
+        {
+          "type": "EMAIL",
+          "emailAddress": "sidd@sidd.com"
+        },
+        {
+          "type": "REGISTEREDEMAILADDRESS",
+          "emailAddress": "createCustomerAccount1@sterlite.com"
+        }
+      ]
+    },
+    {
+      "type": "POSTALADDRESS",
+      "medium": [
+        {
+          "type": "POSTALADDRESS",
+          "streetOne": "a",
+          "streetTwo": "b",
+          "city": "Ahmedabad",
+          "stateOrProvince": "Gujarat",
+          "country": "India",
+          "postcode": "202020"
+        }
+      ]
+    },
+    {
+      "type": "TELEPHONENUMBER",
+      "medium": [
+        {
+          "type": "MOBILE",
+          "number": "7278787878"
+        },
+        {
+          "type": "HOME",
+          "number": "7878787877"
+        },
+        {
+          "type": "FAX",
+          "number": "7878787876"
+        },
+        {
+          "type": "OFFICE",
+          "number": "7878687876"
+        },
+        {
+          "type": "REGISTEREDMOBILE",
+          "number": "8089033720"
+        }
+      ]
+    }
+  ],
+  "demographicParameters": [
+    {
+      "name": "",
+      "value": ""
+    },
+    {
+      "name": "",
+      "value": ""
+    }
+  ],
+  "additionalParameters": [
+    {
+      "name": "Name",
+      "value": "Singh"
+    }
+  ]
+}

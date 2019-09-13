@@ -1,0 +1,94 @@
+{
+  "ipAddress": "127.0.0.1",
+  "fullName": "${customerName}",
+  "billingArea": "Default",
+  "tenantId": 0,
+  "customerCategory": "${customerCategory}",
+  "action": {
+    "sourceChannel": "OM"
+  },
+  "identificationRef": [
+    {
+      "type": "Passport",
+      "identificationId": "rew798564"
+    },
+    {
+      "type": "Customer Unique Number",
+      "identificationId": "rew44958465"
+    },
+    {
+      "type": "Driving License",
+      "identificationId": "dqwd23123"
+    }
+  ],
+  "contactMedium": [
+    {
+      "type": "EMAIL",
+      "medium": [
+        {
+          "type": "EMAIL",
+          "emailAddress": "${emailId}"
+        },
+        {
+          "type": "REGISTEREDEMAILADDRESS",
+          "emailAddress": "${emailId}"
+        }
+      ]
+    },
+    {
+      "type": "POSTALADDRESS",
+      "medium": [
+        {
+          "type": "POSTALADDRESS",
+          "streetOne": "a",
+          "streetTwo": "b",
+          "city": "Ahmedabad",
+          "stateOrProvince": "Gujarat",
+          "country": "India",
+          "postcode": "202020"
+        }
+      ]
+    },
+    {
+      "type": "TELEPHONENUMBER",
+      "medium": [
+        {
+          "type": "MOBILE",
+          "number": "${mobileNumber}"
+        },
+        {
+          "type": "HOME",
+          "number": "${mobileNumber}"
+        },
+        {
+          "type": "FAX",
+          "number": "${mobileNumber}"
+        },
+        {
+          "type": "OFFICE",
+          "number": "${mobileNumber}"
+        },
+        {
+          "type": "REGISTEREDMOBILE",
+          "number": "${mobileNumber}"
+        }
+      ]
+    }
+  ],
+  "demographicParameters": [
+    {
+      "name": "Test",
+      "value": "124252367"
+    },
+    {
+      "name": "Combo Test",
+      "value": "Name1"
+    }
+  ],
+  "additionalParameters": [
+    {
+      "name": "Name",
+      "value": "Singh"
+    }
+  ]
+}

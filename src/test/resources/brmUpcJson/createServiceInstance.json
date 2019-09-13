@@ -1,0 +1,30 @@
+{
+  "ipAddress": "127.0.0.1",
+  "accountNumber": "ELITESIDD0007",
+  "businessHierarchy": "1~~BASIC_PACKAGE",
+  "username": "SIDD0007",
+  "serviceInstanceStatus": "ACTIVE",
+  "action": {
+    "sourceChannel": "OM"
+  },
+  "billingAccountRef": {
+    "accountNumber": "ELITE000569"
+  },
+  "serviceAccountRef": {
+    "accountNumber": "ELITE000570"
+  },
+  "basicProduct": {
+    "name": "saurabhPrepaid",
+    "versionNumber": "2",
+    "bundleOfferDetail": {
+      "bundleOfferName": "BaseBun11",
+      "subscriptionId": "SubscriptionID001"
+    },
+    "additionalParameters": [
+      {
+        "name": "INSTALLMENT_CYCLE",
+        "value": "3"
+      }
+    ]
+  }
+}

@@ -38,6 +38,12 @@ task helloworld(type: JavaExec) {
     main = 'testManager.TestManager'
 }
 
+task apiTest(type: Test) {
+    useTestNG() {
+        include '**/ApiTesting.class'
+    }
+}
+
 dependencies {
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
@@ -53,4 +59,5 @@ dependencies {
     compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.8'
     compile group: 'io.rest-assured', name: 'rest-assured', version: '4.0.0'
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.5.8', ext: 'pom'
+    compile group: 'org.json', name: 'json', version: '20190722'
 }

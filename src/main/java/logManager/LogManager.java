@@ -3,6 +3,8 @@ package logManager;
 import org.apache.log4j.*;
 import propertyManager.PropertyManager;
 
+import static freemarker.log.Logger.selectLoggerLibrary;
+
 /**
  * Usage: Utility Logger Class to log each event in console, html log file and a text file
  * <p>
@@ -33,13 +35,13 @@ public class LogManager {
 
         setConsoleLogs();
         setUserLogs();
-        setHTMLogs();
+        setHTMLLogs();
     }// End of setup
 
     /**
      * Creates setup for HTML Logs
      */
-    private static void setHTMLogs() {
+    private static void setHTMLLogs() {
 
         try {
             HTMLLayout htmlLayout = new HTMLLayout();
@@ -89,7 +91,7 @@ public class LogManager {
     private static void setUserLogs() {
 
         try {
-            freemarker.log.Logger.selectLoggerLibrary(freemarker.log.Logger.LIBRARY_NONE);
+            selectLoggerLibrary(freemarker.log.Logger.LIBRARY_NONE);
 
             // Initialize reference variable for file appender
             FileAppender fileAppender = new FileAppender();

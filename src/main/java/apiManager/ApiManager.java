@@ -3,20 +3,22 @@ package apiManager;
 import excelManager.ExcelManager;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import jsonManager.JsonManager;
+import io.restassured.specification.RequestSpecification;
+import logManager.LogManager;
+import org.json.JSONObject;
 import propertyManager.PropertyManager;
 
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
-
-import static io.restassured.RestAssured.given;
 
 public class ApiManager {
 
     private static ApiManager apiManager;
     private String excelPath = PropertyManager.getProperty("excelPath");
     private ExcelManager excelManager = ExcelManager.getInstance(excelPath);
-    private JsonManager jsonManager = JsonManager.getInstance();
+    private Map<String, String> data = new HashMap<>();
 
     public static ApiManager getInstance() {
 
@@ -26,61 +28,77 @@ public class ApiManager {
         return apiManager;
     }
 
-    public Response callApi(String apiName) throws Exception {
+    private Map<String, String> createPayload(String payload) {
 
-        String filePath = PropertyManager.getProperty("baseDataPath") + apiName;
-        Map<String, String> excelData = excelManager.getRowAsMap(apiName, 1);
-        Map<String, Object> jsonMap = jsonManager.readFromJson(filePath + ".json");
-        jsonMap.putAll(excelData);
+        for (Map.Entry<String, String> m : data.entrySet())
+            payload = payload.replace("{" + m.getKey() + "}", m.getValue());
+        data.put("payload", payload);
+        return data;
+    }
+
+    private String createBody() throws Exception {
+
+        String fileName = PropertyManager.getProperty("baseDataPath") + data.get("apiName") + ".json";
+        String content = new String(Files.readAllBytes(Paths.get(fileName)));
+        JSONObject jsonObject = new JSONObject(content);
+        String jsonFileToString = jsonObject.toString();
+
+        for (Map.Entry<String, String> m : data.entrySet()) {
+            jsonFileToString = jsonFileToString.replace("${" + m.getKey() + "}", m.getValue());
+        }
+
+        return jsonFileToString;
+    }
+
+    public String api(Map<String, String> d) throws Exception {
+
+        LogManager.setup();
+        data = excelManager.getRowAsMap(d.get("apiName"), 1);
+        data.putAll(d);
+        data = createPayload(data.get("payload"));
+        String jsonFileToString = createBody();
+
         RestAssured.baseURI = PropertyManager.getProperty("api.baseURI");
         Response response = null;
         Map<String, Object> headerMap = new HashMap<>();
         headerMap.put("username", PropertyManager.getProperty("api.username"));
         headerMap.put("password", PropertyManager.getProperty("api.password"));
         headerMap.put("content-type", PropertyManager.getProperty("api.content-type"));
+        RequestSpecification request = RestAssured.given().headers(headerMap);
 
-        switch (excelData.get("method")) {
+        switch (data.get("method")) {
 
             case "post":
-                response = given().
-                        when().
-                        headers(headerMap).
-                        body(jsonMap).
-                        post(jsonMap.get("payload").toString());
+                response = request.
+                        body(jsonFileToString).
+                        post(data.get("payload"));
                 break;
 
             case "get":
-                response = given().
-                        when().
-                        headers(headerMap).
-                        get(jsonMap.get("payload").toString());
+                response = request.
+                        get(data.get("payload"));
                 break;
             case "patch":
-                response = given().
-                        when().
-                        headers(headerMap).
-                        body(jsonMap).
-                        patch(jsonMap.get("payload").toString());
+                response = request.
+                        body(jsonFileToString).
+                        patch(data.get("payload"));
                 break;
             case "delete":
-                response = given().
-                        when().
-                        headers(headerMap).
-                        body(jsonMap).
-                        delete(jsonMap.get("payload").toString());
+                response = request.
+                        body(jsonFileToString).
+                        delete(data.get("payload"));
                 break;
             case "put":
-                response = given().
-                        when().
-                        headers(headerMap).
-                        body(jsonMap).
-                        put(jsonMap.get("payload").toString());
+                response = request.
+                        body(jsonFileToString).
+                        put(data.get("payload"));
                 break;
             default:
                 System.out.println("Invalid response found");
                 break;
         }
         assert response != null;
-        return response;
+        response.then().assertThat().statusCode(200);
+        return response.asString();
     }
 }
