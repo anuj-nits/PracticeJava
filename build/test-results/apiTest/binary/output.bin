@@ -1,138 +1,204 @@
 Š0 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://dev.restapi.com:30005
-Š0 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://dev.restapi.com:30005
-x11 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to dev.restapi.com:30005
-x11 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to dev.restapi.com:30005
-o20 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
-o20 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
-m20 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
-m20 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
-v20 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication  - Target auth state: UNCHALLENGED
-v20 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication  - Target auth state: UNCHALLENGED
-t21 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
-t21 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
-e21 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
-e21 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
-·21 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Sending request: DELETE /rest/customerManagementApi/billingAccount/ELITE010188/dissociateDiscount HTTP/1.1
-·21 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Sending request: DELETE /rest/customerManagementApi/billingAccount/ELITE010188/dissociateDiscount HTTP/1.1
-—21 [Test worker] DEBUG org.apache.http.wire  -  >> "DELETE /rest/customerManagementApi/billingAccount/ELITE010188/dissociateDiscount HTTP/1.1[\r][\n]"
-—21 [Test worker] DEBUG org.apache.http.wire  -  >> "DELETE /rest/customerManagementApi/billingAccount/ELITE010188/dissociateDiscount HTTP/1.1[\r][\n]"
-P22 [Test worker] DEBUG org.apache.http.wire  -  >> "password: sysadmin[\r][\n]"
-P22 [Test worker] DEBUG org.apache.http.wire  -  >> "password: sysadmin[\r][\n]"
-I22 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
-I22 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
-M22 [Test worker] DEBUG org.apache.http.wire  -  >> "username: admin[\r][\n]"
-M22 [Test worker] DEBUG org.apache.http.wire  -  >> "username: admin[\r][\n]"
-k22 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-k22 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
-Q22 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Length: 100[\r][\n]"
-Q22 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Length: 100[\r][\n]"
-Y22 [Test worker] DEBUG org.apache.http.wire  -  >> "Host: dev.restapi.com:30005[\r][\n]"
-Y22 [Test worker] DEBUG org.apache.http.wire  -  >> "Host: dev.restapi.com:30005[\r][\n]"
-T23 [Test worker] DEBUG org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
-T23 [Test worker] DEBUG org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
-o23 [Test worker] DEBUG org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)[\r][\n]"
-o23 [Test worker] DEBUG org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)[\r][\n]"
-[23 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
-[23 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
->23 [Test worker] DEBUG org.apache.http.wire  -  >> "[\r][\n]"
->23 [Test worker] DEBUG org.apache.http.wire  -  >> "[\r][\n]"
-23 [Test worker] DEBUG org.apache.http.headers  - >> DELETE /rest/customerManagementApi/billingAccount/ELITE010188/dissociateDiscount HTTP/1.1
-23 [Test worker] DEBUG org.apache.http.headers  - >> DELETE /rest/customerManagementApi/billingAccount/ELITE010188/dissociateDiscount HTTP/1.1
-H23 [Test worker] DEBUG org.apache.http.headers  - >> password: sysadmin
-H23 [Test worker] DEBUG org.apache.http.headers  - >> password: sysadmin
-A23 [Test worker] DEBUG org.apache.http.headers  - >> Accept: */*
-A23 [Test worker] DEBUG org.apache.http.headers  - >> Accept: */*
-E23 [Test worker] DEBUG org.apache.http.headers  - >> username: admin
-E23 [Test worker] DEBUG org.apache.http.headers  - >> username: admin
-c23 [Test worker] DEBUG org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
-c23 [Test worker] DEBUG org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
-I24 [Test worker] DEBUG org.apache.http.headers  - >> Content-Length: 100
-I24 [Test worker] DEBUG org.apache.http.headers  - >> Content-Length: 100
-Q24 [Test worker] DEBUG org.apache.http.headers  - >> Host: dev.restapi.com:30005
-Q24 [Test worker] DEBUG org.apache.http.headers  - >> Host: dev.restapi.com:30005
-L24 [Test worker] DEBUG org.apache.http.headers  - >> Connection: Keep-Alive
-L24 [Test worker] DEBUG org.apache.http.headers  - >> Connection: Keep-Alive
-g24 [Test worker] DEBUG org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)
-g24 [Test worker] DEBUG org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)
-S24 [Test worker] DEBUG org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
-S24 [Test worker] DEBUG org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
-š24 [Test worker] DEBUG org.apache.http.wire  -  >> "{"discountName":"Customer_StliQA_301051139","ipAddress":"10.121.25.117","action":{"remarks":"test"}}"
-š24 [Test worker] DEBUG org.apache.http.wire  -  >> "{"discountName":"Customer_StliQA_301051139","ipAddress":"10.121.25.117","action":{"remarks":"test"}}"
-N336 [Test worker] DEBUG org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
-N336 [Test worker] DEBUG org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
-W339 [Test worker] DEBUG org.apache.http.wire  -  << "X-Powered-By: Undertow/1[\r][\n]"
-W339 [Test worker] DEBUG org.apache.http.wire  -  << "X-Powered-By: Undertow/1[\r][\n]"
-œ340 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization[\r][\n]"
-œ340 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization[\r][\n]"
-Q340 [Test worker] DEBUG org.apache.http.wire  -  << "Server: WildFly/10[\r][\n]"
-Q340 [Test worker] DEBUG org.apache.http.wire  -  << "Server: WildFly/10[\r][\n]"
-Z341 [Test worker] DEBUG org.apache.http.wire  -  << "X-Frame-Options: sameorigin[\r][\n]"
-Z341 [Test worker] DEBUG org.apache.http.wire  -  << "X-Frame-Options: sameorigin[\r][\n]"
-f341 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Expose-Headers: Location[\r][\n]"
-f341 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Expose-Headers: Location[\r][\n]"
-“341 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'[\r][\n]"
-“341 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'[\r][\n]"
-b342 [Test worker] DEBUG org.apache.http.wire  -  << "Date: Fri, 13 Sep 2019 09:12:25 GMT[\r][\n]"
-b342 [Test worker] DEBUG org.apache.http.wire  -  << "Date: Fri, 13 Sep 2019 09:12:25 GMT[\r][\n]"
-U342 [Test worker] DEBUG org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
-U342 [Test worker] DEBUG org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
-]342 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Origin: *[\r][\n]"
-]342 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Origin: *[\r][\n]"
-Y343 [Test worker] DEBUG org.apache.http.wire  -  << "Transfer-Encoding: chunked[\r][\n]"
-Y343 [Test worker] DEBUG org.apache.http.wire  -  << "Transfer-Encoding: chunked[\r][\n]"
-]343 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Type: application/json[\r][\n]"
-]343 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Type: application/json[\r][\n]"
-ƒ343 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH[\r][\n]"
-ƒ343 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH[\r][\n]"
-?344 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
-?344 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
-q345 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
-q345 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
-F345 [Test worker] DEBUG org.apache.http.headers  - << HTTP/1.1 200 OK
-F345 [Test worker] DEBUG org.apache.http.headers  - << HTTP/1.1 200 OK
-O346 [Test worker] DEBUG org.apache.http.headers  - << X-Powered-By: Undertow/1
-O346 [Test worker] DEBUG org.apache.http.headers  - << X-Powered-By: Undertow/1
-”346 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization
-”346 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization
-I346 [Test worker] DEBUG org.apache.http.headers  - << Server: WildFly/10
-I346 [Test worker] DEBUG org.apache.http.headers  - << Server: WildFly/10
-R346 [Test worker] DEBUG org.apache.http.headers  - << X-Frame-Options: sameorigin
-R346 [Test worker] DEBUG org.apache.http.headers  - << X-Frame-Options: sameorigin
-^346 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Expose-Headers: Location
-^346 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Expose-Headers: Location
-‹347 [Test worker] DEBUG org.apache.http.headers  - << Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'
-‹347 [Test worker] DEBUG org.apache.http.headers  - << Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'
-Z347 [Test worker] DEBUG org.apache.http.headers  - << Date: Fri, 13 Sep 2019 09:12:25 GMT
-Z347 [Test worker] DEBUG org.apache.http.headers  - << Date: Fri, 13 Sep 2019 09:12:25 GMT
-M347 [Test worker] DEBUG org.apache.http.headers  - << Connection: keep-alive
-M347 [Test worker] DEBUG org.apache.http.headers  - << Connection: keep-alive
-U347 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Origin: *
-U347 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Origin: *
-Q348 [Test worker] DEBUG org.apache.http.headers  - << Transfer-Encoding: chunked
-Q348 [Test worker] DEBUG org.apache.http.headers  - << Transfer-Encoding: chunked
-U348 [Test worker] DEBUG org.apache.http.headers  - << Content-Type: application/json
-U348 [Test worker] DEBUG org.apache.http.headers  - << Content-Type: application/json
-{348 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH
-{348 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH
-s357 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
-s357 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
-‰375 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json
-‰375 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json
-¯375 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-¯375 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
-A405 [Test worker] DEBUG org.apache.http.wire  -  << "c3[\r][\n]"
-A405 [Test worker] DEBUG org.apache.http.wire  -  << "c3[\r][\n]"
-ú405 [Test worker] DEBUG org.apache.http.wire  -  << "{"responseCode":-200005,"responseMessage":"Inputs are not valid.","responseMessageDetails":[{"code":-10010130,"message":"AccountNumber is invalid OR operation can't perform on current status."}]}"
-ú405 [Test worker] DEBUG org.apache.http.wire  -  << "{"responseCode":-200005,"responseMessage":"Inputs are not valid.","responseMessageDetails":[{"code":-10010130,"message":"AccountNumber is invalid OR operation can't perform on current status."}]}"
-?406 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
-?406 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
-@406 [Test worker] DEBUG org.apache.http.wire  -  << "0[\r][\n]"
-@406 [Test worker] DEBUG org.apache.http.wire  -  << "0[\r][\n]"
-?406 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
-?406 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
-¦406 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@14390754
-¦406 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@14390754
-|406 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
-|406 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
--200005
-Inputs are not valid.
+w8 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to dev.restapi.com:30005
+o17 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+m18 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+v18 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication  - Target auth state: UNCHALLENGED
+t18 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+e18 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+ƒ19 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /rest/system/createCity HTTP/1.1
+c19 [Test worker] DEBUG org.apache.http.wire  -  >> "POST /rest/system/createCity HTTP/1.1[\r][\n]"
+P19 [Test worker] DEBUG org.apache.http.wire  -  >> "password: sysadmin[\r][\n]"
+I20 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+M20 [Test worker] DEBUG org.apache.http.wire  -  >> "username: admin[\r][\n]"
+k20 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+P20 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Length: 99[\r][\n]"
+Y20 [Test worker] DEBUG org.apache.http.wire  -  >> "Host: dev.restapi.com:30005[\r][\n]"
+T20 [Test worker] DEBUG org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+o20 [Test worker] DEBUG org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)[\r][\n]"
+[20 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+>20 [Test worker] DEBUG org.apache.http.wire  -  >> "[\r][\n]"
+[20 [Test worker] DEBUG org.apache.http.headers  - >> POST /rest/system/createCity HTTP/1.1
+H20 [Test worker] DEBUG org.apache.http.headers  - >> password: sysadmin
+A20 [Test worker] DEBUG org.apache.http.headers  - >> Accept: */*
+E20 [Test worker] DEBUG org.apache.http.headers  - >> username: admin
+c20 [Test worker] DEBUG org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+H21 [Test worker] DEBUG org.apache.http.headers  - >> Content-Length: 99
+Q21 [Test worker] DEBUG org.apache.http.headers  - >> Host: dev.restapi.com:30005
+L21 [Test worker] DEBUG org.apache.http.headers  - >> Connection: Keep-Alive
+g21 [Test worker] DEBUG org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)
+S21 [Test worker] DEBUG org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+™21 [Test worker] DEBUG org.apache.http.wire  -  >> "{"country":"India","city":"Ahmedabad","ipAddress":"10.121.25.11","state":"Gujarat","status":"SHOW"}"
+N350 [Test worker] DEBUG org.apache.http.wire  -  << "HTTP/1.1 200 OK[\r][\n]"
+W352 [Test worker] DEBUG org.apache.http.wire  -  << "X-Powered-By: Undertow/1[\r][\n]"
+œ352 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization[\r][\n]"
+Q352 [Test worker] DEBUG org.apache.http.wire  -  << "Server: WildFly/10[\r][\n]"
+Z352 [Test worker] DEBUG org.apache.http.wire  -  << "X-Frame-Options: sameorigin[\r][\n]"
+f352 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Expose-Headers: Location[\r][\n]"
+“352 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'[\r][\n]"
+b352 [Test worker] DEBUG org.apache.http.wire  -  << "Date: Fri, 13 Sep 2019 09:25:11 GMT[\r][\n]"
+U353 [Test worker] DEBUG org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+]353 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Origin: *[\r][\n]"
+Y353 [Test worker] DEBUG org.apache.http.wire  -  << "Transfer-Encoding: chunked[\r][\n]"
+]353 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Type: application/json[\r][\n]"
+ƒ353 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH[\r][\n]"
+?353 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+q354 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 200 OK
+F354 [Test worker] DEBUG org.apache.http.headers  - << HTTP/1.1 200 OK
+O354 [Test worker] DEBUG org.apache.http.headers  - << X-Powered-By: Undertow/1
+”354 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization
+I354 [Test worker] DEBUG org.apache.http.headers  - << Server: WildFly/10
+R355 [Test worker] DEBUG org.apache.http.headers  - << X-Frame-Options: sameorigin
+^355 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Expose-Headers: Location
+‹355 [Test worker] DEBUG org.apache.http.headers  - << Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'
+Z355 [Test worker] DEBUG org.apache.http.headers  - << Date: Fri, 13 Sep 2019 09:25:11 GMT
+M355 [Test worker] DEBUG org.apache.http.headers  - << Connection: keep-alive
+U355 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Origin: *
+Q355 [Test worker] DEBUG org.apache.http.headers  - << Transfer-Encoding: chunked
+U355 [Test worker] DEBUG org.apache.http.headers  - << Content-Type: application/json
+{355 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH
+s361 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+‰371 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json
+¯372 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+A415 [Test worker] DEBUG org.apache.http.wire  -  << "41[\r][\n]"
+x415 [Test worker] DEBUG org.apache.http.wire  -  << "{"responseCode":-1,"responseMessage":"City name already exists."}"
+?415 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+@415 [Test worker] DEBUG org.apache.http.wire  -  << "0[\r][\n]"
+?415 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+¦415 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3a12bd29
+|415 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+Œ717 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://dev.restapi.com:30005
+Œ717 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Get connection for route {}->http://dev.restapi.com:30005
+y717 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to dev.restapi.com:30005
+y717 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnectionOperator  - Connecting to dev.restapi.com:30005
+p719 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+p719 [Test worker] DEBUG org.apache.http.client.protocol.RequestAddCookies  - CookieSpec selected: ignoreCookies
+n719 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+n719 [Test worker] DEBUG org.apache.http.client.protocol.RequestAuthCache  - Auth cache not set in the context
+w719 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication  - Target auth state: UNCHALLENGED
+w719 [Test worker] DEBUG org.apache.http.client.protocol.RequestTargetAuthentication  - Target auth state: UNCHALLENGED
+u719 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+u719 [Test worker] DEBUG org.apache.http.client.protocol.RequestProxyAuthentication  - Proxy auth state: UNCHALLENGED
+f719 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+f719 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Attempt 1 to execute request
+„719 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /rest/system/createCity HTTP/1.1
+„719 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Sending request: POST /rest/system/createCity HTTP/1.1
+d719 [Test worker] DEBUG org.apache.http.wire  -  >> "POST /rest/system/createCity HTTP/1.1[\r][\n]"
+d719 [Test worker] DEBUG org.apache.http.wire  -  >> "POST /rest/system/createCity HTTP/1.1[\r][\n]"
+Q719 [Test worker] DEBUG org.apache.http.wire  -  >> "password: sysadmin[\r][\n]"
+Q719 [Test worker] DEBUG org.apache.http.wire  -  >> "password: sysadmin[\r][\n]"
+J719 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+J719 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept: */*[\r][\n]"
+N720 [Test worker] DEBUG org.apache.http.wire  -  >> "username: admin[\r][\n]"
+N720 [Test worker] DEBUG org.apache.http.wire  -  >> "username: admin[\r][\n]"
+l720 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+l720 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Type: application/json; charset=UTF-8[\r][\n]"
+Q720 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Length: 87[\r][\n]"
+Q720 [Test worker] DEBUG org.apache.http.wire  -  >> "Content-Length: 87[\r][\n]"
+Z720 [Test worker] DEBUG org.apache.http.wire  -  >> "Host: dev.restapi.com:30005[\r][\n]"
+Z720 [Test worker] DEBUG org.apache.http.wire  -  >> "Host: dev.restapi.com:30005[\r][\n]"
+U720 [Test worker] DEBUG org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+U720 [Test worker] DEBUG org.apache.http.wire  -  >> "Connection: Keep-Alive[\r][\n]"
+p720 [Test worker] DEBUG org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)[\r][\n]"
+p720 [Test worker] DEBUG org.apache.http.wire  -  >> "User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)[\r][\n]"
+\720 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+\720 [Test worker] DEBUG org.apache.http.wire  -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+?720 [Test worker] DEBUG org.apache.http.wire  -  >> "[\r][\n]"
+?720 [Test worker] DEBUG org.apache.http.wire  -  >> "[\r][\n]"
+\720 [Test worker] DEBUG org.apache.http.headers  - >> POST /rest/system/createCity HTTP/1.1
+\720 [Test worker] DEBUG org.apache.http.headers  - >> POST /rest/system/createCity HTTP/1.1
+I720 [Test worker] DEBUG org.apache.http.headers  - >> password: sysadmin
+I720 [Test worker] DEBUG org.apache.http.headers  - >> password: sysadmin
+B720 [Test worker] DEBUG org.apache.http.headers  - >> Accept: */*
+B720 [Test worker] DEBUG org.apache.http.headers  - >> Accept: */*
+F720 [Test worker] DEBUG org.apache.http.headers  - >> username: admin
+F720 [Test worker] DEBUG org.apache.http.headers  - >> username: admin
+d721 [Test worker] DEBUG org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+d721 [Test worker] DEBUG org.apache.http.headers  - >> Content-Type: application/json; charset=UTF-8
+I721 [Test worker] DEBUG org.apache.http.headers  - >> Content-Length: 87
+I721 [Test worker] DEBUG org.apache.http.headers  - >> Content-Length: 87
+R721 [Test worker] DEBUG org.apache.http.headers  - >> Host: dev.restapi.com:30005
+R721 [Test worker] DEBUG org.apache.http.headers  - >> Host: dev.restapi.com:30005
+M721 [Test worker] DEBUG org.apache.http.headers  - >> Connection: Keep-Alive
+M721 [Test worker] DEBUG org.apache.http.headers  - >> Connection: Keep-Alive
+h721 [Test worker] DEBUG org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)
+h721 [Test worker] DEBUG org.apache.http.headers  - >> User-Agent: Apache-HttpClient/4.5.3 (Java/11.0.2)
+T721 [Test worker] DEBUG org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+T721 [Test worker] DEBUG org.apache.http.headers  - >> Accept-Encoding: gzip,deflate
+Ž721 [Test worker] DEBUG org.apache.http.wire  -  >> "{"country":"India","city":"Ahmedabad","ipAddress":"","state":"Gujarat","status":"SHOW"}"
+Ž721 [Test worker] DEBUG org.apache.http.wire  -  >> "{"country":"India","city":"Ahmedabad","ipAddress":"","state":"Gujarat","status":"SHOW"}"
+X1040 [Test worker] DEBUG org.apache.http.wire  -  << "HTTP/1.1 400 Bad Request[\r][\n]"
+X1040 [Test worker] DEBUG org.apache.http.wire  -  << "HTTP/1.1 400 Bad Request[\r][\n]"
+X1040 [Test worker] DEBUG org.apache.http.wire  -  << "X-Powered-By: Undertow/1[\r][\n]"
+X1040 [Test worker] DEBUG org.apache.http.wire  -  << "X-Powered-By: Undertow/1[\r][\n]"
+1040 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization[\r][\n]"
+1040 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization[\r][\n]"
+R1040 [Test worker] DEBUG org.apache.http.wire  -  << "Server: WildFly/10[\r][\n]"
+R1040 [Test worker] DEBUG org.apache.http.wire  -  << "Server: WildFly/10[\r][\n]"
+[1040 [Test worker] DEBUG org.apache.http.wire  -  << "X-Frame-Options: sameorigin[\r][\n]"
+[1040 [Test worker] DEBUG org.apache.http.wire  -  << "X-Frame-Options: sameorigin[\r][\n]"
+g1040 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Expose-Headers: Location[\r][\n]"
+g1040 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Expose-Headers: Location[\r][\n]"
+”1040 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'[\r][\n]"
+”1040 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'[\r][\n]"
+c1040 [Test worker] DEBUG org.apache.http.wire  -  << "Date: Fri, 13 Sep 2019 09:25:12 GMT[\r][\n]"
+c1040 [Test worker] DEBUG org.apache.http.wire  -  << "Date: Fri, 13 Sep 2019 09:25:12 GMT[\r][\n]"
+V1040 [Test worker] DEBUG org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+V1040 [Test worker] DEBUG org.apache.http.wire  -  << "Connection: keep-alive[\r][\n]"
+^1040 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Origin: *[\r][\n]"
+^1040 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Origin: *[\r][\n]"
+Z1040 [Test worker] DEBUG org.apache.http.wire  -  << "Transfer-Encoding: chunked[\r][\n]"
+Z1040 [Test worker] DEBUG org.apache.http.wire  -  << "Transfer-Encoding: chunked[\r][\n]"
+^1040 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Type: application/json[\r][\n]"
+^1040 [Test worker] DEBUG org.apache.http.wire  -  << "Content-Type: application/json[\r][\n]"
+„1041 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH[\r][\n]"
+„1041 [Test worker] DEBUG org.apache.http.wire  -  << "Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH[\r][\n]"
+@1041 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+@1041 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+{1041 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 400 Bad Request
+{1041 [Test worker] DEBUG org.apache.http.impl.conn.DefaultClientConnection  - Receiving response: HTTP/1.1 400 Bad Request
+P1041 [Test worker] DEBUG org.apache.http.headers  - << HTTP/1.1 400 Bad Request
+P1041 [Test worker] DEBUG org.apache.http.headers  - << HTTP/1.1 400 Bad Request
+P1041 [Test worker] DEBUG org.apache.http.headers  - << X-Powered-By: Undertow/1
+P1041 [Test worker] DEBUG org.apache.http.headers  - << X-Powered-By: Undertow/1
+•1041 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization
+•1041 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Headers: content-type,password,username,ipaddress,tenantid,Authorization
+J1041 [Test worker] DEBUG org.apache.http.headers  - << Server: WildFly/10
+J1041 [Test worker] DEBUG org.apache.http.headers  - << Server: WildFly/10
+S1041 [Test worker] DEBUG org.apache.http.headers  - << X-Frame-Options: sameorigin
+S1041 [Test worker] DEBUG org.apache.http.headers  - << X-Frame-Options: sameorigin
+_1041 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Expose-Headers: Location
+_1041 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Expose-Headers: Location
+Œ1041 [Test worker] DEBUG org.apache.http.headers  - << Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'
+Œ1041 [Test worker] DEBUG org.apache.http.headers  - << Content-Security-Policy: frame-src 'self'; frame-ancestors 'self'; object-src 'self'
+[1041 [Test worker] DEBUG org.apache.http.headers  - << Date: Fri, 13 Sep 2019 09:25:12 GMT
+[1041 [Test worker] DEBUG org.apache.http.headers  - << Date: Fri, 13 Sep 2019 09:25:12 GMT
+N1041 [Test worker] DEBUG org.apache.http.headers  - << Connection: keep-alive
+N1041 [Test worker] DEBUG org.apache.http.headers  - << Connection: keep-alive
+V1041 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Origin: *
+V1041 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Origin: *
+R1041 [Test worker] DEBUG org.apache.http.headers  - << Transfer-Encoding: chunked
+R1041 [Test worker] DEBUG org.apache.http.headers  - << Transfer-Encoding: chunked
+V1041 [Test worker] DEBUG org.apache.http.headers  - << Content-Type: application/json
+V1041 [Test worker] DEBUG org.apache.http.headers  - << Content-Type: application/json
+|1041 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH
+|1041 [Test worker] DEBUG org.apache.http.headers  - << Access-Control-Allow-Methods: GET,POST,HEAD,OPTIONS,PUT,DELETE,PATCH
+t1041 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+t1041 [Test worker] DEBUG org.apache.http.impl.client.DefaultHttpClient  - Connection can be kept alive indefinitely
+Š1042 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json
+Š1042 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsing response as: application/json
+°1042 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+°1042 [Test worker] DEBUG io.restassured.internal.RequestSpecificationImpl$RestAssuredHttpBuilder  - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+B1043 [Test worker] DEBUG org.apache.http.wire  -  << "55[\r][\n]"
+B1043 [Test worker] DEBUG org.apache.http.wire  -  << "55[\r][\n]"
+1043 [Test worker] DEBUG org.apache.http.wire  -  << "{"responseCode":-1,"responseMessage":"createCity.arg0.ipAddress Invalid IP Address."}"
+1043 [Test worker] DEBUG org.apache.http.wire  -  << "{"responseCode":-1,"responseMessage":"createCity.arg0.ipAddress Invalid IP Address."}"
+@1043 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+@1043 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+A1043 [Test worker] DEBUG org.apache.http.wire  -  << "0[\r][\n]"
+A1043 [Test worker] DEBUG org.apache.http.wire  -  << "0[\r][\n]"
+@1044 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+@1044 [Test worker] DEBUG org.apache.http.wire  -  << "[\r][\n]"
+§1044 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@229cd869
+§1044 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@229cd869
+}1044 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely
+}1044 [Test worker] DEBUG org.apache.http.impl.conn.BasicClientConnectionManager  - Connection can be kept alive indefinitely

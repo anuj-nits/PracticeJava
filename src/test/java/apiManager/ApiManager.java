@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import logManager.LogManager;
 import org.json.JSONObject;
+import org.testng.Assert;
 import propertyManager.PropertyManager;
 
 import java.nio.file.Files;
@@ -100,6 +101,9 @@ public class ApiManager {
         }
         assert response != null;
         response.then().assertThat().statusCode(Integer.parseInt(data.get("statusCode")));
-        return response.jsonPath();
+        JsonPath jp = response.jsonPath();
+        Assert.assertEquals(d.get("responseCode"), jp.get("responseCode").toString(), "Invalid response code found");
+        Assert.assertEquals(d.get("responseMessage"), jp.get("responseMessage"), "Invalid response message found");
+        return jp;
     }
 }
