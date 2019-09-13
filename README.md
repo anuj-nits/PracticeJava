@@ -7,9 +7,9 @@ All classes utilizes singleton approach to create objects only once and use them
 Also contains jenkinsfile & docker-compose to test very basic selenium script.
 
 ## Docker Images used:
-Selenium/hub:latest
-Selenium/node-chrome-debug:latest
-Selenium/node-firefox-debug:latest
+</br>Selenium/hub:latest
+</br>Selenium/node-chrome-debug:latest
+</br>Selenium/node-firefox-debug:latest
 
 ## 
 
