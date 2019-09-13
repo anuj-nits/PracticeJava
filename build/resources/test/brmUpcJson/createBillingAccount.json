@@ -1,0 +1,72 @@
+{
+
+"ipAddress": "127.0.0.1",
+"fullName" : "test EC",
+"billingCycleSpecificationName" : "Default",
+"billFormat" : "Summary",
+"billPresentationMedia" : "Paper",
+
+"chargingPattern": "POSTPAID",
+"currencyCode" : "INR",
+
+"contactMedium" : [
+{
+"type" : "EMAIL",
+"medium" : [
+{
+"type" : "EMAIL",
+"emailAddress" : "test@ec.com"
+}
+]
+},
+{
+"type" : "POSTALADDRESS",
+"medium" : [
+{
+"type" : "POSTALADDRESS",
+"streetOne" : "aa",
+"streetTwo" : "bb",
+"city" : "Ahmedabad",
+"stateOrProvince" : "Gujarat",
+"country" : "India",
+"postcode" : "202020"
+}
+]
+},
+{
+"type" : "TELEPHONENUMBER",
+"medium" : [
+{
+"type" : "MOBILE",
+"number" : "8878787878"
+},
+{
+"type" : "HOME",
+"number" : "8878787877"
+},
+{
+"type" : "FAX",
+"number" : "8878787876"
+},
+{
+"type" : "OFFICE",
+"number" : "8878787876"
+}
+]
+}
+],
+"creditClassRef" : {
+"creditClass" : "CC1",
+"creditLimit" : "0"
+},
+"demographicParameters" : [
+{
+"name" : "BATest",
+"value" : "weqe"
+}
+],
+"customerAccountRef" : {
+"relationType" : "PARENT_CA_RELATION",
+"accountNumber" : "ELITE005031"
+}
+}

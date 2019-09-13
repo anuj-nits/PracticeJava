@@ -1,0 +1,7 @@
+{
+  "ipAddress": "10.121.25.117",
+  "discountName": "${discountName}",
+  "action": {
+    "remarks": "test"
+  }
+}
