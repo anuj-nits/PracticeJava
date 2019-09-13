@@ -99,7 +99,7 @@ public class ApiManager {
                 break;
         }
         assert response != null;
-        response.then().assertThat().statusCode(200);
+        response.then().assertThat().statusCode(Integer.parseInt(data.get("statusCode")));
         return response.jsonPath();
     }
 }

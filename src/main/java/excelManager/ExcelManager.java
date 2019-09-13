@@ -36,7 +36,7 @@ public class ExcelManager {
      *
      * @author anuj gupta
      */
-    private void openInputStream() throws Exception {
+    public void openInputStream() throws Exception {
 
         fis = new FileInputStream(workBookPath);
 
@@ -53,7 +53,7 @@ public class ExcelManager {
      *
      * @author anuj gupta
      */
-    private void closeInputStream() throws Exception {
+    public void closeInputStream() throws Exception {
 
         fis.close();
     }
@@ -65,7 +65,7 @@ public class ExcelManager {
      * @return Number of columns in excel
      * @author anuj gupta
      */
-    private Integer getColumnCount(String sheetName) {
+    public Integer getColumnCount(String sheetName) {
 
         // Get sheet with the given name
         sheet = workbook.getSheet(sheetName);
@@ -81,7 +81,7 @@ public class ExcelManager {
      * @return Number of rows in excel
      * @author anuj gupta
      */
-    private Integer getRowCount(String sheetName) {
+    public Integer getRowCount(String sheetName) {
 
         // Get sheet with the given name
         sheet = workbook.getSheet(sheetName);
@@ -97,7 +97,7 @@ public class ExcelManager {
      * @return value of cell in string format
      * @author anuj gupta
      */
-    private String getCellData(String sheetName, int rowNumber, int columnNumber) throws Exception {
+    public String getCellData(String sheetName, int rowNumber, int columnNumber) throws Exception {
 
         String data = "";
         openInputStream();
