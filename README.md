@@ -6,6 +6,13 @@ A test project to understand the basics of Apache POI, CSV, Extent Reporting, Js
 All classes utilizes singleton approach to create objects only once and use them across.
 Also contains jenkinsfile & docker-compose to test very basic selenium script.
 
+## Docker Images used:
+Selenium/hub:latest
+Selenium/node-chrome-debug:latest
+Selenium/node-firefox-debug:latest
+
+## 
+
 ## [Apache POI](https://github.com/anuj-nits/PracticeJava/tree/master/src/main/java/excelManager)
 ```java
 getColumnCount()       // given the sheetname, it returns the count of column of any excel sheet
